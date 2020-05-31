@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VqiER8tHz1W7TdFjMdF6quYHpyFGHL7iof3E1pE6OkCTKxQNajg0kKI8xf56yp/si5JLFGVA+9n6Nevl5XMW4w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\komal\\Desktop\\IBMHack\\Mental-Health-API\\src\\Mental.Health.Web\\Mental.Health.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\komal\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
