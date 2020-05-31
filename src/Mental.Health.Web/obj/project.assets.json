@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Mental.Health.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Mental.Health.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mental.Health.Model.dll": {}
+        }
+      },
+      "Mental.Health.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Mental.Health.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mental.Health.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mental.Health.Service.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Mental.Health.Model/1.0.0": {
+      "type": "project",
+      "path": "../Mental.Health.Model/Mental.Health.Model.csproj",
+      "msbuildProject": "../Mental.Health.Model/Mental.Health.Model.csproj"
+    },
+    "Mental.Health.Service/1.0.0": {
+      "type": "project",
+      "path": "../Mental.Health.Service/Mental.Health.Service.csproj",
+      "msbuildProject": "../Mental.Health.Service/Mental.Health.Service.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Mental.Health.Model >= 1.0.0",
+      "Mental.Health.Service >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\komal\\.nuget\\packages\\": {}
@@ -32,7 +70,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\komal\\Desktop\\IBMHack\\Mental-Health-API\\src\\Mental.Health.Model\\Mental.Health.Model.csproj": {
+              "projectPath": "C:\\Users\\komal\\Desktop\\IBMHack\\Mental-Health-API\\src\\Mental.Health.Model\\Mental.Health.Model.csproj"
+            },
+            "C:\\Users\\komal\\Desktop\\IBMHack\\Mental-Health-API\\src\\Mental.Health.Service\\Mental.Health.Service.csproj": {
+              "projectPath": "C:\\Users\\komal\\Desktop\\IBMHack\\Mental-Health-API\\src\\Mental.Health.Service\\Mental.Health.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

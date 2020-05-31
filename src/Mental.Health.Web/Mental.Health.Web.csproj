@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mental.Health.Model\Mental.Health.Model.csproj" />
+    <ProjectReference Include="..\Mental.Health.Service\Mental.Health.Service.csproj" />
+  </ItemGroup>
+
 
 </Project>
