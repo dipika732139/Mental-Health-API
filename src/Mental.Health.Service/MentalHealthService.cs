@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Mental.Health.Service
 {
     public class MentalHealthService : IMentalHealthService
     {
-        public QuestionResponse GetQuestion(QuestionRequest request)
+        public Task<QuestionResponse> GetQuestion(QuestionRequest request)
         {
             throw new NotImplementedException();
         }
 
-        public ResultResponse GetResult(ResultRequest request)
+        public Task<ResultResponse> GetResult(ResultRequest request)
         {
             throw new NotImplementedException();
         }
 
-        public AnswerResponse SaveAnswer(AnswerRequest request)
+        public Task<AnswerResponse> SaveAnswer(AnswerRequest request)
         {
             throw new NotImplementedException();
         }
