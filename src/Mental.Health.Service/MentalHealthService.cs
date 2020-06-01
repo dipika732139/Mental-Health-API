@@ -7,19 +7,31 @@ namespace Mental.Health.Service
 {
     public class MentalHealthService : IMentalHealthService
     {
-        public Task<QuestionResponse> GetQuestion(QuestionRequest request, string testId)
+        private readonly IMentalHealthController _mentalHealthController;
+        public MentalHealthService(IMentalHealthController mentalHealthController)
         {
-            throw new NotImplementedException();
+            _mentalHealthController = mentalHealthController;
+        }
+        public async Task<QuestionResponse> GetQuestion(QuestionRequest request)
+        {
+            //validate request
+            var question = await _mentalHealthController.GetQuestion(request.ToQuestion());
+            return question.ToQuestionResponse();
         }
 
-        public Task<ResultResponse> GetResult(ResultRequest request, string testId)
+        public async Task<ResultResponse> GetResult(ResultRequest request, string testId)
         {
-            throw new NotImplementedException();
+            //validate request
+            var result = await _mentalHealthController.GetResult(request.ToResult(testId));
+            return result.ToResultResponse();
         }
 
-        public Task<AnswerResponse> SaveAnswer(AnswerRequest request, string testId)
+        public async Task<AnswerResponse> SaveAnswer(AnswerRequest request, string testId)
         {
-            throw new NotImplementedException();
+            //validate request
+            if (await _mentalHealthController.SaveResponse(request.ToAnswer(testId)))
+                return new AnswerResponse() { IsSubmissionSuccessful = true };
+            return new AnswerResponse() { IsSubmissionSuccessful = false };
         }
     }
 }

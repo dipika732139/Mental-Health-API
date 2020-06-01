@@ -2,6 +2,6 @@
 {
     public class AnswerResponse
 	{
-		public bool IsSuccessful { get; set; }
+		public bool IsSubmissionSuccessful { get; set; }
 	}
 }

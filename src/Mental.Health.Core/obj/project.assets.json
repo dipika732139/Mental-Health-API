@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Mental.Health.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Mental.Health.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mental.Health.Model.dll": {}
+        }
       }
     }
   },
@@ -679,10 +689,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Mental.Health.Model/1.0.0": {
+      "type": "project",
+      "path": "../Mental.Health.Model/Mental.Health.Model.csproj",
+      "msbuildProject": "../Mental.Health.Model/Mental.Health.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Mental.Health.Model >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
@@ -717,7 +733,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\dmandal\\Desktop\\IBMHackathon\\Mental-Health-API\\src\\Mental.Health.Model\\Mental.Health.Model.csproj": {
+              "projectPath": "C:\\Users\\dmandal\\Desktop\\IBMHackathon\\Mental-Health-API\\src\\Mental.Health.Model\\Mental.Health.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
