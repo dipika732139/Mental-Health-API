@@ -7,17 +7,17 @@ namespace Mental.Health.Service
 {
     public class MentalHealthService : IMentalHealthService
     {
-        public Task<QuestionResponse> GetQuestion(QuestionRequest request)
+        public Task<QuestionResponse> GetQuestion(QuestionRequest request, string testId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ResultResponse> GetResult(ResultRequest request)
+        public Task<ResultResponse> GetResult(ResultRequest request, string testId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<AnswerResponse> SaveAnswer(AnswerRequest request)
+        public Task<AnswerResponse> SaveAnswer(AnswerRequest request, string testId)
         {
             throw new NotImplementedException();
         }
