@@ -120,6 +120,9 @@
   <data name="InvalidField" xml:space="preserve">
     <value>Invalid value provided for {0} in the request.</value>
   </data>
+  <data name="JsonReadingFailure" xml:space="preserve">
+    <value>Failed to read json file</value>
+  </data>
   <data name="MissingField" xml:space="preserve">
     <value>The value for the field {0} is required in the request.</value>
   </data>

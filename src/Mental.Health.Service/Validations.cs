@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using static Mental.Health.Errors;
 
 namespace Mental.Health.Service
 {
@@ -7,7 +6,7 @@ namespace Mental.Health.Service
     {
         public static void EnsureValid<TRequest>(TRequest request, IValidator<TRequest> validator)
         {
-            var validationError = ClientSide.ValidationFailure();
+            var validationError = ClientSideExceptions.ValidationFailure();
 
             if (request == null)
                 throw validationError;

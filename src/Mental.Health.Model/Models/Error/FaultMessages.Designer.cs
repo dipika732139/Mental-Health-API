@@ -70,6 +70,15 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to read json file.
+        /// </summary>
+        public static string JsonReadingFailure {
+            get {
+                return ResourceManager.GetString("JsonReadingFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The value for the field {0} is required in the request..
         /// </summary>
         public static string MissingField {
