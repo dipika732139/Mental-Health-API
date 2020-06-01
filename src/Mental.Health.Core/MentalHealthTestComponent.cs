@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Mental.Health.Core
 {
-    public class MentalHealthComponent : IMentalHealthComponent
+    public class MentalHealthTestComponent : IMentalHealthTestComponent
     {
         public Task<Question> GetQuestion(Question question)
         {

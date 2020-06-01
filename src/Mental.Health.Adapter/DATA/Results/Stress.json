@@ -1,0 +1,20 @@
+[
+  {
+    "Score": 1,
+    "ImageUrl": "www.abc.com/abc.jpg",
+    "Description": "desctiption about the mental state",
+    "Summary": "Brief description about the result"
+  },
+  {
+    "Score": 2,
+    "ImageUrl": "www.abc.com/abc.jpg",
+    "Description": "desctiption about the mental state",
+    "Summary": "Brief description about the result"
+  },
+  {
+    "Score": 3,
+    "ImageUrl": "www.abc.com/abc.jpg",
+    "Description": "desctiption about the mental state",
+    "Summary": "Brief description about the result"
+  }
+]

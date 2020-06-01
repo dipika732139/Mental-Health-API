@@ -9,10 +9,10 @@ namespace Mental.Health.Web.Controllers
 {
     [Route("api/mentalHealth")]
     [ApiController]
-    public class MentalHealthController : ControllerBase
+    public class MentalHealthTestController : ControllerBase
     {
-        private readonly IMentalHealthService _mentalHealthService;
-        public MentalHealthController(IMentalHealthService mentalHealthService)
+        private readonly IMentalHealthTestService _mentalHealthService;
+        public MentalHealthTestController(IMentalHealthTestService mentalHealthService)
         {
             _mentalHealthService = mentalHealthService;
         }

@@ -1,0 +1,167 @@
+[
+  {
+    "UserId": "ID123_ABC",
+    "AnxietyReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      }
+    ],
+    "StressReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      },
+      {
+        "Score": 7,
+        "Time": ""
+      }
+    ],
+    "DepressionReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      }
+    ]
+  },
+  {
+    "UserId": "ID456_DEF",
+    "AnxietyReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      }
+    ],
+    "StressReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      },
+      {
+        "Score": 7,
+        "Time": ""
+      }
+    ],
+    "DepressionReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      }
+    ]
+  },
+  {
+    "UserId": "ID789_GHI",
+    "AnxietyReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      }
+    ],
+    "StressReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      },
+      {
+        "Score": 7,
+        "Time": ""
+      }
+    ],
+    "DepressionReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      }
+    ]
+  },
+  {
+    "UserId": "ID101_JKL",
+    "AnxietyReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      }
+    ],
+    "StressReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      },
+      {
+        "Score": 7,
+        "Time": ""
+      }
+    ],
+    "DepressionReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      }
+    ]
+  },
+  {
+    "UserId": "ID112_MNO",
+    "AnxietyReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      }
+    ],
+    "StressReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      },
+      {
+        "Score": 6,
+        "Time": ""
+      },
+      {
+        "Score": 7,
+        "Time": ""
+      }
+    ],
+    "DepressionReport": [
+      {
+        "Score": 5,
+        "Time": ""
+      }
+    ]
+  }
+]

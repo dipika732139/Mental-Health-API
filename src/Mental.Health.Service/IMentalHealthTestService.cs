@@ -2,7 +2,7 @@
 
 namespace Mental.Health.Service
 {
-    public interface IMentalHealthService
+    public interface IMentalHealthTestService
     {
         Task<QuestionResponse> GetQuestion(QuestionRequest request);
         Task<AnswerResponse> SaveAnswer(AnswerRequest request,string testid);

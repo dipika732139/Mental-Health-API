@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Mental.Health.Service
 {
-    public class MentalHealthService : IMentalHealthService
+    public class MentalHealthTestService : IMentalHealthTestService
     {
-        private readonly IMentalHealthComponent _mentalHealthComponent;
-        public MentalHealthService(IMentalHealthComponent mentalHealthComponent)
+        private readonly IMentalHealthTestComponent _mentalHealthComponent;
+        public MentalHealthTestService(IMentalHealthTestComponent mentalHealthComponent)
         {
             _mentalHealthComponent = mentalHealthComponent;
         }
