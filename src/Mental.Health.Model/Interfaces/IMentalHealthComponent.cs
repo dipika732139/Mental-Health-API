@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Mental.Health
 {
-    public interface IMentalHealthController
+    public interface IMentalHealthComponent
     {
         Task<Question> GetQuestion(Question question);
         Task<bool> SaveResponse(Answer answer);

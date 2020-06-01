@@ -61,11 +61,38 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid value provided for {0} in the request..
+        /// </summary>
+        public static string InvalidField {
+            get {
+                return ResourceManager.GetString("InvalidField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The value for the field {0} is required in the request..
+        /// </summary>
+        public static string MissingField {
+            get {
+                return ResourceManager.GetString("MissingField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Internal Server Error.
         /// </summary>
         public static string UnexpectedError {
             get {
                 return ResourceManager.GetString("UnexpectedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request format is incorrect.
+        /// </summary>
+        public static string ValidationFailure {
+            get {
+                return ResourceManager.GetString("ValidationFailure", resourceCulture);
             }
         }
     }

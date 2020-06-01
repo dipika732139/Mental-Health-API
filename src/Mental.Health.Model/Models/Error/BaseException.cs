@@ -14,12 +14,21 @@ namespace Mental.Health
         {
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
+            Infos = new List<ErrorInfo>();
         }
         public BaseException(int errorCode, string errorMessage, HttpStatusCode httpStatusCode)
         {
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
             HttpStatusCode = httpStatusCode;
+            Infos = new List<ErrorInfo>();
+        }
+        public BaseException(string errorCode, string errorMessage, HttpStatusCode httpStatusCode)
+        {
+            ErrorCode = int.Parse(errorCode);
+            ErrorMessage = errorMessage;
+            HttpStatusCode = httpStatusCode;
+            Infos = new List<ErrorInfo>();
         }
     }
 }

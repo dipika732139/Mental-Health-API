@@ -12,14 +12,13 @@ namespace Mental.Health.Web.Controllers
     public class MentalHealthController : ControllerBase
     {
         private readonly IMentalHealthService _mentalHealthService;
-        public MentalHealthController()
+        public MentalHealthController(IMentalHealthService mentalHealthService)
         {
-            _mentalHealthService = null;
+            _mentalHealthService = mentalHealthService;
         }
         [HttpGet("question")]
         public async Task<ActionResult> GetQuestion([FromBody] QuestionRequest request)
         {
-            throw new BaseException(10,"hehe");
             var result = await _mentalHealthService.GetQuestion(request);
             return result == null ? (ActionResult)NotFound() : Ok(result);
         }

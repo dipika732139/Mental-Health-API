@@ -7,29 +7,29 @@ namespace Mental.Health.Service
 {
     public class MentalHealthService : IMentalHealthService
     {
-        private readonly IMentalHealthController _mentalHealthController;
-        public MentalHealthService(IMentalHealthController mentalHealthController)
+        private readonly IMentalHealthComponent _mentalHealthComponent;
+        public MentalHealthService(IMentalHealthComponent mentalHealthComponent)
         {
-            _mentalHealthController = mentalHealthController;
+            _mentalHealthComponent = mentalHealthComponent;
         }
         public async Task<QuestionResponse> GetQuestion(QuestionRequest request)
         {
-            //validate request
-            var question = await _mentalHealthController.GetQuestion(request.ToQuestion());
+            Validations.EnsureValid(request, new QuestionRequestValidator());
+            var question = await _mentalHealthComponent.GetQuestion(request.ToQuestion());
             return question.ToQuestionResponse();
         }
 
         public async Task<ResultResponse> GetResult(ResultRequest request, string testId)
         {
-            //validate request
-            var result = await _mentalHealthController.GetResult(request.ToResult(testId));
+            Validations.EnsureValid(request, new ResultRequestValidator());
+            var result = await _mentalHealthComponent.GetResult(request.ToResult(testId));
             return result.ToResultResponse();
         }
 
         public async Task<AnswerResponse> SaveAnswer(AnswerRequest request, string testId)
         {
-            //validate request
-            if (await _mentalHealthController.SaveResponse(request.ToAnswer(testId)))
+            Validations.EnsureValid(request, new AnswerRequestValidator());
+            if (await _mentalHealthComponent.SaveResponse(request.ToAnswer(testId)))
                 return new AnswerResponse() { IsSubmissionSuccessful = true };
             return new AnswerResponse() { IsSubmissionSuccessful = false };
         }
