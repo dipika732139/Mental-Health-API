@@ -19,7 +19,7 @@ namespace Mental.Health.Web.Controllers
         [HttpGet("question")]
         public async Task<ActionResult> GetQuestion([FromBody] QuestionRequest request)
         {
-            throw new Exception();// { ErrorCode = 12, ErrorMessage = "ABC" };
+            throw new BaseException(10,"hehe");
             var result = await _mentalHealthService.GetQuestion(request);
             return result == null ? (ActionResult)NotFound() : Ok(result);
         }
