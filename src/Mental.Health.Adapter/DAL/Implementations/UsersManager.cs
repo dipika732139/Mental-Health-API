@@ -23,17 +23,21 @@ namespace Mental.Health.Adapter
             var existingUser = GetUserById(user.UserId);
             if (existingUser != null)
                 return false;
-            _users.Add(user);
+            lock(_users)
+                _users.Add(user);
             return JsonFileHandler.WriteInFile(_users, KeyStore.FilePaths.Users);
         }
         public bool DeleteUserById(string userId)
         {
             if (string.IsNullOrEmpty(userId))
                 return false;
-            var user = GetUserById(userId);
-            if (user == null)
-                return true;
-            _users.Remove(user);
+            lock (_users)
+            {
+                var user = GetUserById(userId);
+                if (user == null)
+                    return true;
+                _users.Remove(user);
+            }
             return JsonFileHandler.WriteInFile(_users, KeyStore.FilePaths.Users);
         }
 
@@ -50,13 +54,16 @@ namespace Mental.Health.Adapter
         {
             if (string.IsNullOrEmpty(user?.UserId))
                 return false;
-            var existingUser = GetUserById(user.UserId);
-            if (existingUser != null)
-                return AddUser(user);
-            existingUser.UserName = user.UserName;
-            existingUser.Gender = user.Gender;
-            existingUser.Age = user.Age;
-            return JsonFileHandler.WriteInFile(_users, KeyStore.FilePaths.Users);
+            lock (_users)
+            {
+                var existingUser = GetUserById(user.UserId);
+                if (existingUser != null)
+                    return AddUser(user);
+                existingUser.UserName = user.UserName;
+                existingUser.Gender = user.Gender;
+                existingUser.Age = user.Age;
+                return JsonFileHandler.WriteInFile(_users, KeyStore.FilePaths.Users);
+            }
         }
     }
 }

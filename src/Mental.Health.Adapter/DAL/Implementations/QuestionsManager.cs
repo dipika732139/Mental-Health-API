@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Mental.Health.Adapter
 {
     public class QuestionsManager : IQuestionsManager
     {
-        private static List<Question> _anxietyQuestions;
-        private static List<Question> _depressionQuestions;
-        private static List<Question> _stressQuestions;
+        private static object _lockObj;
+        private static List<QuestionModel> _anxietyQuestions;
+        private static List<QuestionModel> _depressionQuestions;
+        private static List<QuestionModel> _stressQuestions;
         public QuestionsManager()
         {
             _anxietyQuestions = GetQuestionsFromFile(KeyStore.FilePaths.Questions.Anxiety);
@@ -15,46 +17,116 @@ namespace Mental.Health.Adapter
             _stressQuestions = GetQuestionsFromFile(KeyStore.FilePaths.Questions.Stress);
         }
 
-        private List<Question> GetQuestionsFromFile(string path)
+        private List<QuestionModel> GetQuestionsFromFile(string path)
         {
             try
             {
-                return JsonFileHandler.ReadFile<Question>(path);
+                return JsonFileHandler.ReadFile<QuestionModel>(path);
             }
             catch
             {
-                return new List<Question>();
+                return new List<QuestionModel>();
             }
         }
 
         public bool AddQuestion(Test test, QuestionModel question)
         {
-            throw new System.NotImplementedException();
+            var existingQuestion = GetQuestionByNumber(test, question?.Number ?? -1);
+            if (existingQuestion != null || string.IsNullOrEmpty(question.Question))
+                return false;
+            var questions = GetAllQuestions(test);
+            lock (_lockObj)
+            {
+                questions.Add(question);
+            }
+            return JsonFileHandler.WriteInFile(questions, GetPath(test));
         }
 
         public bool DeleteQuestion(Test test, QuestionModel question)
         {
-            throw new System.NotImplementedException();
+            var existingQuestion = GetQuestionByNumber(test, question?.Number ?? -1);
+            if (existingQuestion == null)
+                return true;
+            var questions = GetAllQuestions(test);
+            lock (_lockObj)
+            {
+                try
+                {
+                    questions.Remove(existingQuestion);
+                }
+                catch { }
+            }
+            return JsonFileHandler.WriteInFile(questions, GetPath(test));
         }
 
         public bool DeleteQuestionByNumber(Test test, int number)
         {
-            throw new System.NotImplementedException();
+            var existingQuestion = GetQuestionByNumber(test, number);
+            if (existingQuestion == null)
+                return true;
+            var questions = GetAllQuestions(test);
+            lock (_lockObj)
+            {
+                try
+                {
+                    questions.Remove(existingQuestion);
+                }
+                catch { }
+            }
+            return JsonFileHandler.WriteInFile(questions, GetPath(test));
         }
 
         public List<QuestionModel> GetAllQuestions(Test test)
         {
-            throw new System.NotImplementedException();
+            var questions = new List<QuestionModel>();
+            switch (test)
+            {
+                case Test.Anxiety:
+                    questions = _anxietyQuestions;
+                    break;
+                case Test.Depression:
+                    questions = _depressionQuestions;
+                    break;
+                case Test.Stress:
+                    questions = _stressQuestions;
+                    break;
+            }
+            return questions;
         }
-
+        private string GetPath(Test test)
+        {
+            var path = default(string);
+            switch (test)
+            {
+                case Test.Anxiety:
+                    path = KeyStore.FilePaths.Results.Anxiety;
+                    break;
+                case Test.Depression:
+                    path = KeyStore.FilePaths.Results.Depression;
+                    break;
+                case Test.Stress:
+                    path = KeyStore.FilePaths.Results.Stress;
+                    break;
+            }
+            return path;
+        }
         public QuestionModel GetQuestionByNumber(Test test, int number)
         {
-            throw new System.NotImplementedException();
+            var questions = GetAllQuestions(test);
+            return questions.Where(question => question.Number == number).FirstOrDefault();
         }
 
         public bool UpdateQuestion(Test test, QuestionModel question)
         {
-            throw new System.NotImplementedException();
+            lock (_lockObj)
+            {
+                var existingQuestion = GetQuestionByNumber(test, question?.Number ?? -1);
+                if (existingQuestion == null || string.IsNullOrEmpty(question.Question))
+                    return false;
+                existingQuestion.Question = question.Question;
+                existingQuestion.Options = question.Options;
+                return JsonFileHandler.WriteInFile(GetAllQuestions(test), GetPath(test));
+            }
         }
     }
 }

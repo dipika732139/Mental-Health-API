@@ -19,19 +19,22 @@ namespace Mental.Health.Adapter
         }
         public bool AddUserTestResultToReport(string userId, Test test, TestResult result)
         {
-            if (string.IsNullOrEmpty(userId))
-                return false;
             var userReport = GetUserReportByUserId(userId);
+            if (userReport == null || result?.TestId == null)
+                return false;
             switch (test)
             {
                 case Test.Anxiety:
-                    userReport.AnxietyReport.Add(result);
+                    lock(_userReports)
+                        userReport.AnxietyReport.Add(result);
                     break;
                 case Test.Depression:
-                    userReport.DepressionReport.Add(result);
+                    lock (_userReports)
+                        userReport.DepressionReport.Add(result);
                     break;
                 case Test.Stress:
-                    userReport.StressReport.Add(result);
+                    lock (_userReports)
+                        userReport.StressReport.Add(result);
                     break;
             }
             return JsonFileHandler.WriteInFile(_userReports, KeyStore.FilePaths.UserReports);
@@ -39,9 +42,9 @@ namespace Mental.Health.Adapter
 
         public bool CleanAllTestResultsByUserId(string userId)
         {
-            if (string.IsNullOrEmpty(userId))
-                return false;
             var userReport = GetUserReportByUserId(userId);
+            if (userReport == null)
+                return false;
             userReport.AnxietyReport = new List<TestResult>();
             userReport.DepressionReport = new List<TestResult>();
             userReport.StressReport = new List<TestResult>();
@@ -50,9 +53,9 @@ namespace Mental.Health.Adapter
 
         public bool CleanTestResults(string userId, Test test)
         {
-            if (string.IsNullOrEmpty(userId))
-                return false;
             var userReport = GetUserReportByUserId(userId);
+            if (userReport == null)
+                return false;
             switch (test)
             {
                 case Test.Anxiety:
@@ -72,6 +75,7 @@ namespace Mental.Health.Adapter
         {
             if (string.IsNullOrEmpty(userId) || GetUserReportByUserId(userId) != null)
                 return false;
+            lock(_userReports)
             _userReports.Add(new UserReport()
                                     {
                                         UserId = userId,
@@ -84,11 +88,10 @@ namespace Mental.Health.Adapter
 
         public bool DeleteUserReportByUserId(string userId)
         {
-            if (string.IsNullOrEmpty(userId))
-                return false;
             var userReport = GetUserReportByUserId(userId);
             if (userReport == null)
                 return true;
+            lock(_userReports)
             _userReports.Remove(userReport);
             return JsonFileHandler.WriteInFile(_userReports, KeyStore.FilePaths.UserReports);
         }
