@@ -9,7 +9,7 @@ namespace Mental.Health.Adapter
         {
             try
             {
-                _users = JsonFileHandler.ReadFile<User>(KeyStore.FilePaths.Users);
+                _users = JsonFileHandler.ReadFile<User>(KeyStore.FilePaths.Users) ?? new List<User>();
             }
             catch
             {

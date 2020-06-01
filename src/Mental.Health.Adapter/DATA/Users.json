@@ -1,32 +1,32 @@
 [
   {
-    "UserId": "ID123_ABC",
-    "UserName": "Komal Singh",
-    "Age": 22,
-    "Gender": "F"
-  },
-  {
-    "UserId": "ID456_DEF",
+    "UserId": "prity",
     "UserName": "Prity Agarwal",
     "Age": 26,
-    "Gender": "F"
+    "Gender": 2
   },
   {
-    "UserId": "ID789_GHI",
+    "UserId": "komal",
+    "UserName": "Komal Singh",
+    "Age": 23,
+    "Gender": 2
+  },
+  {
+    "UserId": "sakshi",
     "UserName": "Sakshi Tripathi",
-    "Age": 22,
-    "Gender": "F"
+    "Age": 23,
+    "Gender": 2
   },
   {
-    "UserId": "ID101_JKL",
+    "UserId": "surekha",
     "UserName": "Surekha Krishna",
-    "Age": 27,
-    "Gender": "F"
+    "Age": 26,
+    "Gender": 2
   },
   {
-    "UserId": "ID112_MNO",
+    "UserId": "dips",
     "UserName": "Dipika Mandal",
     "Age": 23,
-    "Gender": "F"
+    "Gender": 2
   }
 ]

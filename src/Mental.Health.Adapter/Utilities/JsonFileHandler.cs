@@ -25,7 +25,7 @@ namespace Mental.Health.Adapter
         {
             try
             {
-                var json = JsonConvert.SerializeObject(ts);
+                var json = JsonConvert.SerializeObject(ts,Formatting.Indented);
                 return Write(path, json);
             }
             catch { return false; }

@@ -1,23 +1,29 @@
-﻿namespace Mental.Health
+﻿using System;
+using System.IO;
+
+namespace Mental.Health
 {
     public static class KeyStore
     {
         public static class FilePaths
         {
+            //to be used while deploying
+            //public static readonly string FolderPath = Environment.CurrentDirectory;
+            public static readonly string FolderPath = Path.Combine(Environment.CurrentDirectory,@"..\..\..\..", "Mental.Health.Adapter");
             public static class Questions
             {
-                public static readonly string Anxiety = @".\DATA\Questions\Anxiety.json";
-                public static readonly string Depression = @".\DATA\Questions\Depression.json";
-                public static readonly string Stress = @".\DATA\Questions\Stress.json";
+                public static readonly string Anxiety = FolderPath + "\\DATA\\Questions\\Anxiety.json";
+                public static readonly string Depression = FolderPath + "\\DATA\\Questions\\Depression.json";
+                public static readonly string Stress = FolderPath + "\\DATA\\Questions\\Stress.json";
             }
             public static class Results
             {
-                public static readonly string Anxiety = @".\DATA\Results\Anxiety.json";
-                public static readonly string Depression = @".\DATA\Results\Depression.json";
-                public static readonly string Stress = @".\DATA\Results\Stress.json";
+                public static readonly string Anxiety = FolderPath + "\\DATA\\Results\\Anxiety.json";
+                public static readonly string Depression = FolderPath + "\\DATA\\Results\\Depression.json";
+                public static readonly string Stress = FolderPath + "\\DATA\\Results\\Stress.json";
             }
-            public static readonly string Users = @".\DATA\Users.json";
-            public static readonly string UserReports = @".\DATA\UserReports.json";
+            public static readonly string Users = FolderPath + "\\DATA\\Users.json";
+            public static readonly string UserReports = FolderPath + "\\DATA\\UserReports.json";
         }
     }
 }

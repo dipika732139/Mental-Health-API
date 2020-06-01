@@ -12,9 +12,10 @@ namespace Mental.Health.Adapter
         private static List<Result> _stressResults;
         public ResultsManager()
         {
-            _anxietyResults = GetResultsFromFile(KeyStore.FilePaths.Results.Anxiety);
-            _depressionResults = GetResultsFromFile(KeyStore.FilePaths.Results.Depression);
-            _stressResults = GetResultsFromFile(KeyStore.FilePaths.Results.Stress);
+            _anxietyResults = GetResultsFromFile(GetPath(Test.Anxiety));
+            _depressionResults = GetResultsFromFile(GetPath(Test.Depression));
+            _stressResults = GetResultsFromFile(GetPath(Test.Stress));
+            _lockObj = new object();
         }
 
         public bool AddResult(Test test, Result result)
@@ -140,7 +141,7 @@ namespace Mental.Health.Adapter
         {
             try
             {
-                return JsonFileHandler.ReadFile<Result>(path);
+                return JsonFileHandler.ReadFile<Result>(path) ?? new List<Result>();
             }
             catch
             {

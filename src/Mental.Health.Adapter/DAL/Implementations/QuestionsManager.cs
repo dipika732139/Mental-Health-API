@@ -12,16 +12,17 @@ namespace Mental.Health.Adapter
         private static List<QuestionModel> _stressQuestions;
         public QuestionsManager()
         {
-            _anxietyQuestions = GetQuestionsFromFile(KeyStore.FilePaths.Questions.Anxiety);
-            _depressionQuestions = GetQuestionsFromFile(KeyStore.FilePaths.Questions.Depression);
-            _stressQuestions = GetQuestionsFromFile(KeyStore.FilePaths.Questions.Stress);
+            _anxietyQuestions = GetQuestionsFromFile(GetPath(Test.Anxiety));
+            _depressionQuestions = GetQuestionsFromFile(GetPath(Test.Depression));
+            _stressQuestions = GetQuestionsFromFile(GetPath(Test.Stress));
+            _lockObj = new object();
         }
 
         private List<QuestionModel> GetQuestionsFromFile(string path)
         {
             try
             {
-                return JsonFileHandler.ReadFile<QuestionModel>(path);
+                return JsonFileHandler.ReadFile<QuestionModel>(path)?? new List<QuestionModel>();
             }
             catch
             {
@@ -99,13 +100,13 @@ namespace Mental.Health.Adapter
             switch (test)
             {
                 case Test.Anxiety:
-                    path = KeyStore.FilePaths.Results.Anxiety;
+                    path = KeyStore.FilePaths.Questions.Anxiety;
                     break;
                 case Test.Depression:
-                    path = KeyStore.FilePaths.Results.Depression;
+                    path = KeyStore.FilePaths.Questions.Depression;
                     break;
                 case Test.Stress:
-                    path = KeyStore.FilePaths.Results.Stress;
+                    path = KeyStore.FilePaths.Questions.Stress;
                     break;
             }
             return path;

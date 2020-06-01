@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Mental.Health.Adapter
@@ -10,7 +11,7 @@ namespace Mental.Health.Adapter
         {
             try
             {
-                _userReports = JsonFileHandler.ReadFile<UserReport>(KeyStore.FilePaths.UserReports);
+                _userReports = JsonFileHandler.ReadFile<UserReport>(KeyStore.FilePaths.UserReports) ?? new List<UserReport>();
             }
             catch
             {
@@ -22,6 +23,7 @@ namespace Mental.Health.Adapter
             var userReport = GetUserReportByUserId(userId);
             if (userReport == null || result?.TestId == null)
                 return false;
+            result.Time = DateTime.Now;
             switch (test)
             {
                 case Test.Anxiety:
