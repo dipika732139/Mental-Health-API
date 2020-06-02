@@ -8,7 +8,7 @@
                 ? null
                 : new QuestionResponse()
                 {
-                    Question = question.QuestionData,
+                    Question = question.Statement,
                     Options = question.Options.ToOptionsContract()
                 };
         }

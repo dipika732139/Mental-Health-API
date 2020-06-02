@@ -8,7 +8,7 @@
                 ? null
                 : new Question()
                 {
-                    MentalHealthTestId = request.MentalHealthTestId,
+                    TestType = request.TestType,
                     QuestionId = request.QuestionNumber
                 };
         }

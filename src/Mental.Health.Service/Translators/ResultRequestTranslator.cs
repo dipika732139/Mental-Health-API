@@ -9,7 +9,7 @@
                 : new Result()
                 {
                     UserId = request.UserId,
-                    MentalHealthTestId = request.MentalHealthTestId
+                    TestType = request.TestType
                 };
         }
     }

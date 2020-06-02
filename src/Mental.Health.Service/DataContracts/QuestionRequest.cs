@@ -2,7 +2,7 @@
 {
     public class QuestionRequest
 	{
-		public string MentalHealthTestId { get; set; }
+		public string TestType { get; set; }
 		public int QuestionNumber { get; set; }
 	}
 }

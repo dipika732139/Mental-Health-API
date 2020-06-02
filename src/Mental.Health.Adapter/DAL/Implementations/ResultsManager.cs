@@ -12,13 +12,13 @@ namespace Mental.Health.Adapter
         private static List<Result> _stressResults;
         public ResultsManager()
         {
-            _anxietyResults = GetResultsFromFile(GetPath(Test.Anxiety));
-            _depressionResults = GetResultsFromFile(GetPath(Test.Depression));
-            _stressResults = GetResultsFromFile(GetPath(Test.Stress));
+            _anxietyResults = GetResultsFromFile(GetPath(TestType.Anxiety));
+            _depressionResults = GetResultsFromFile(GetPath(TestType.Depression));
+            _stressResults = GetResultsFromFile(GetPath(TestType.Stress));
             _lockObj = new object();
         }
 
-        public bool AddResult(Test test, Result result)
+        public bool AddResult(TestType test, Result result)
         {
             if (result?.Score == null || result?.Summary == null)
                 return false;
@@ -34,25 +34,25 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(results, filePath);
         }
 
-        private string GetPath(Test test)
+        private string GetPath(TestType test)
         {
             var path = default(string);
             switch (test)
             {
-                case Test.Anxiety:
+                case TestType.Anxiety:
                     path = KeyStore.FilePaths.Results.Anxiety;
                     break;
-                case Test.Depression:
+                case TestType.Depression:
                     path = KeyStore.FilePaths.Results.Depression;
                     break;
-                case Test.Stress:
+                case TestType.Stress:
                     path = KeyStore.FilePaths.Results.Stress;
                     break;
             }
             return path;
         }
 
-        public bool DeleteResult(Test test, Result result)
+        public bool DeleteResult(TestType test, Result result)
         {
             if (result?.Score == null || result?.Summary == null)
                 return false;
@@ -72,7 +72,7 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(results, filePath);
         }
 
-        public bool DeleteResultByScore(Test test, int score)
+        public bool DeleteResultByScore(TestType test, int score)
         {
             var results = GetAllResults(test);
             var filePath = GetPath(test);
@@ -90,25 +90,25 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(results, filePath);
         }
 
-        public List<Result> GetAllResults(Test test)
+        public List<Result> GetAllResults(TestType test)
         {
             var results = new List<Result>();
             switch (test)
             {
-                case Test.Anxiety:
+                case TestType.Anxiety:
                     results = _anxietyResults;
                     break;
-                case Test.Depression:
+                case TestType.Depression:
                     results = _depressionResults;
                     break;
-                case Test.Stress:
+                case TestType.Stress:
                     results = _stressResults;
                     break;
             }
             return results;
         }
 
-        public Result GetResultByScore(Test test, int score)
+        public Result GetResultByScore(TestType test, int score)
         {
             var results = GetAllResults(test);
             var filePath = GetPath(test);
@@ -116,7 +116,7 @@ namespace Mental.Health.Adapter
             return existingResult;
         }
 
-        public bool UpdateResult(Test test, Result result)
+        public bool UpdateResult(TestType test, Result result)
         {
             if (result?.Score == null || result?.Summary == null)
                 return false;

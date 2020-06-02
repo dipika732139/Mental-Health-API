@@ -16,14 +16,14 @@ namespace Mental.Health.Service
                 .WithErrorCode(FaultCodes.InvalidField)
                 .WithMessage(ErrorMessages.InvalidField("UserId"));
 
-            RuleFor(x => x.MentalHealthTestId)
+            RuleFor(x => x.TestType)
             .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotNull()
                 .WithErrorCode(FaultCodes.MissingField)
-                .WithMessage(ErrorMessages.MissingField("MentalHealthTestId"))
+                .WithMessage(ErrorMessages.MissingField("TestType"))
                 .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("MentalHealthTestId"));
+                .WithMessage(ErrorMessages.InvalidField("TestType"));
 
             RuleFor(x => x.QuestionNumber)
                 .Must(IsValidQuestionOrOptionNumber)

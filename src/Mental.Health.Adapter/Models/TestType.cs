@@ -1,6 +1,6 @@
 ﻿namespace Mental.Health.Adapter
 {
-    public enum Test
+    public enum TestType
     {
         Anxiety,
         Depression,

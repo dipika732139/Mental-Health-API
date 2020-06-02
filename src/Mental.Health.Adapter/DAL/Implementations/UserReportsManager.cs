@@ -18,7 +18,7 @@ namespace Mental.Health.Adapter
                 _userReports = new List<UserReport>();
             }
         }
-        public bool AddUserTestResultToReport(string userId, Test test, TestResult result)
+        public bool AddUserTestResultToReport(string userId, TestType test, TestResult result)
         {
             var userReport = GetUserReportByUserId(userId);
             if (userReport == null || result?.TestId == null)
@@ -26,15 +26,15 @@ namespace Mental.Health.Adapter
             result.Time = DateTime.Now;
             switch (test)
             {
-                case Test.Anxiety:
+                case TestType.Anxiety:
                     lock(_userReports)
                         userReport.AnxietyReport.Add(result);
                     break;
-                case Test.Depression:
+                case TestType.Depression:
                     lock (_userReports)
                         userReport.DepressionReport.Add(result);
                     break;
-                case Test.Stress:
+                case TestType.Stress:
                     lock (_userReports)
                         userReport.StressReport.Add(result);
                     break;
@@ -53,20 +53,20 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(_userReports, KeyStore.FilePaths.UserReports);
         }
 
-        public bool CleanTestResults(string userId, Test test)
+        public bool CleanTestResults(string userId, TestType test)
         {
             var userReport = GetUserReportByUserId(userId);
             if (userReport == null)
                 return false;
             switch (test)
             {
-                case Test.Anxiety:
+                case TestType.Anxiety:
                     userReport.AnxietyReport = new List<TestResult>();
                     break;
-                case Test.Depression:
+                case TestType.Depression:
                     userReport.DepressionReport = new List<TestResult>();
                     break;
-                case Test.Stress:
+                case TestType.Stress:
                     userReport.StressReport = new List<TestResult>();
                     break;
             }
