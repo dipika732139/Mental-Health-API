@@ -10,5 +10,6 @@ namespace Mental.Health
         {
             return new BaseException(FaultCodes.JsonReadingFailure, FaultMessages.JsonReadingFailure, HttpStatusCode.InternalServerError);
         }
+
     }
 }

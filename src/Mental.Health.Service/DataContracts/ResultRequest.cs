@@ -3,6 +3,6 @@
     public class ResultRequest
 	{
 		public string UserId { get; set; }
-		public string MentalHealthTestId { get; set; }
+		public string TestType { get; set; }
 	}
 }

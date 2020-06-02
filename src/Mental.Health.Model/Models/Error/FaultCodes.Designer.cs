@@ -70,6 +70,24 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 7.
+        /// </summary>
+        public static string InvalidTestId {
+            get {
+                return ResourceManager.GetString("InvalidTestId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 6.
+        /// </summary>
+        public static string InvalidUser {
+            get {
+                return ResourceManager.GetString("InvalidUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 5.
         /// </summary>
         public static string JsonReadingFailure {

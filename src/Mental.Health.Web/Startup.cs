@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Mental.Health.Adapter;
 using Mental.Health.Core;
 using Mental.Health.Service;
 using Mental.Health.Web.Middlewares;
@@ -30,6 +31,11 @@ namespace Mental.Health.Web
         {
             services.AddTransient<IMentalHealthTestComponent, MentalHealthTestComponent>();
             services.AddTransient<IMentalHealthTestService, MentalHealthTestService>();
+            services.AddTransient<IMentalHealthTestAdapter, MentalHealthTestAdapter>();
+            services.AddSingleton<IQuestionsManager, QuestionsManager>();
+            services.AddSingleton<IUserReportsManager, UserReportsManager>();
+            services.AddSingleton<IUsersManager, UsersManager>();
+            services.AddSingleton<IResultContentsManager, ResultContentsManager>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddJsonOptions(options => options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore); ;
         }
 

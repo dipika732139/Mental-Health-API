@@ -5,15 +5,18 @@
     "Options": [
       {
         "Number": 1,
-        "Option": "Option A"
+        "Option": "Option A",
+        "Point": 7
       },
       {
         "Number": 2,
-        "Option": "Option B"
+        "Option": "Option B",
+        "Point": 7
       },
       {
         "Number": 3,
-        "Option": "Option C"
+        "Option": "Option C",
+        "Point": 7
       }
     ]
   },
@@ -23,15 +26,18 @@
     "Options": [
       {
         "Number": 1,
-        "Option": "Option A"
+        "Option": "Option A",
+        "Point": 7
       },
       {
         "Number": 2,
-        "Option": "Option B"
+        "Option": "Option B",
+        "Point": 7
       },
       {
         "Number": 3,
-        "Option": "Option C"
+        "Option": "Option C",
+        "Point": 7
       }
     ]
   },
@@ -41,15 +47,18 @@
     "Options": [
       {
         "Number": 1,
-        "Option": "Option A"
+        "Option": "Option A",
+        "Point": 7
       },
       {
         "Number": 2,
-        "Option": "Option B"
+        "Option": "Option B",
+        "Point": 7
       },
       {
         "Number": 3,
-        "Option": "Option C"
+        "Option": "Option C",
+        "Point": 7
       }
     ]
   }

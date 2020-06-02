@@ -1,9 +1,9 @@
 ﻿namespace Mental.Health
 {
-    public class Result
+    public class Report
     {
         public string UserId { get; set; }
-        public string MentalHealthTestId { get; set; }
+        public string TestType { get; set; }
         public string TestId { get; set; }
         public string MoodImageUrl { get; set; }
         public double Score { get; set; }
