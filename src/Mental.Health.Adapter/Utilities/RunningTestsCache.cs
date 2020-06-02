@@ -9,6 +9,7 @@ namespace Mental.Health.Adapter
         {
             if (TestType_UserTest_Choices != null)
                 return;
+            TestType_UserTest_Choices = new Dictionary<TestType, Dictionary<(string UserId, string TestId), Dictionary<int, int>>>();
             TestType_UserTest_Choices.Add(TestType.Anxiety, new Dictionary<(string UserId, string TestId), Dictionary<int, int>>());
             TestType_UserTest_Choices.Add(TestType.Depression, new Dictionary<(string UserId, string TestId), Dictionary<int, int>>());
             TestType_UserTest_Choices.Add(TestType.Stress, new Dictionary<(string UserId, string TestId), Dictionary<int, int>>());

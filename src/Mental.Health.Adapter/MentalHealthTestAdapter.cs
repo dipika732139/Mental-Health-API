@@ -13,7 +13,7 @@ namespace Mental.Health.Adapter
         private IUsersManager _usersManager;
         private IResultContentsManager _resultContentsManager;
         private Dictionary<TestType, Dictionary<(string UserId, string TestId), Dictionary<int, int>>> _cache;
-        public MentalHealthTestAdapter(IQuestionsManager questionsManager,IUserReportsManager userReportsManager, IUsersManager usersManager , IResultContentsManager resultContentsManager)
+        public MentalHealthTestAdapter(IQuestionsManager questionsManager = null,IUserReportsManager userReportsManager = null, IUsersManager usersManager = null , IResultContentsManager resultContentsManager = null)
         {
             _questionsManager = questionsManager;
             _userReportsManager = userReportsManager;

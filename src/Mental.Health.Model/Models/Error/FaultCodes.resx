@@ -120,6 +120,9 @@
   <data name="InvalidField" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="InvalidTestId" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="InvalidUser" xml:space="preserve">
     <value>6</value>
   </data>

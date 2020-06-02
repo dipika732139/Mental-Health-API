@@ -70,6 +70,15 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The test is Invalid.
+        /// </summary>
+        public static string InvalidTestId {
+            get {
+                return ResourceManager.GetString("InvalidTestId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The user ID is invalid.
         /// </summary>
         public static string InvalidUser {

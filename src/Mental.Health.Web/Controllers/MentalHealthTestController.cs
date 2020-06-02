@@ -7,7 +7,7 @@ using Mental.Health.Service;
 
 namespace Mental.Health.Web.Controllers
 {
-    [Route("api/mentalHealth")]
+    [Route("api/mentalHealthTest")]
     [ApiController]
     public class MentalHealthTestController : ControllerBase
     {

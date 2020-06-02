@@ -9,7 +9,8 @@
                 : new Report()
                 {
                     UserId = request.UserId,
-                    TestType = request.TestType
+                    TestType = request.TestType,
+                    TestId=testId
                 };
         }
     }

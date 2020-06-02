@@ -15,7 +15,7 @@ namespace Mental.Health.Adapter
                 var json = ReadAllText(path);
                 ts = JsonConvert.DeserializeObject<List<T>>(json);
             }
-            catch
+            catch(Exception ex)
             {
                 throw ServerSideExceptions.JsonReadingFailure();
             }
