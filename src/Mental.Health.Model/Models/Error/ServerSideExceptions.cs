@@ -10,5 +10,10 @@ namespace Mental.Health
         {
             return new BaseException(FaultCodes.JsonReadingFailure, FaultMessages.JsonReadingFailure, HttpStatusCode.InternalServerError);
         }
+
+        public static BaseException InvalidUser()
+        {
+            return new BaseException(FaultCodes.InvalidUser, FaultMessages.InvalidUser, HttpStatusCode.Forbidden);
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Mental.Health
 {
-    public class Result
+    public class Report
     {
         public string UserId { get; set; }
         public string TestType { get; set; }

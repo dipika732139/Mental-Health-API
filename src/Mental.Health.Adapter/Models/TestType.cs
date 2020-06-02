@@ -2,6 +2,7 @@
 {
     public enum TestType
     {
+        Unknown,
         Anxiety,
         Depression,
         Stress

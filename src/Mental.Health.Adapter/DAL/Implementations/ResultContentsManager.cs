@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace Mental.Health.Adapter
 {
-    public class ResultsManager : IResultsManager
+    public class ResultContentsManager : IResultContentsManager
     {
         private static object _lockObj;
-        private static List<Result> _anxietyResults;
-        private static List<Result> _depressionResults;
-        private static List<Result> _stressResults;
-        public ResultsManager()
+        private static List<ResultContent> _anxietyResults;
+        private static List<ResultContent> _depressionResults;
+        private static List<ResultContent> _stressResults;
+        public ResultContentsManager()
         {
             _anxietyResults = GetResultsFromFile(GetPath(TestType.Anxiety));
             _depressionResults = GetResultsFromFile(GetPath(TestType.Depression));
@@ -18,11 +18,11 @@ namespace Mental.Health.Adapter
             _lockObj = new object();
         }
 
-        public bool AddResult(TestType test, Result result)
+        public bool AddResultContent(TestType test, ResultContent result)
         {
             if (result?.Score == null || result?.Summary == null)
                 return false;
-            var results = GetAllResults(test);
+            var results = GetAllResultContents(test);
             var filePath = GetPath(test);
             var existingResult = results.Where(r => r.Score == result.Score).FirstOrDefault();
             if (existingResult != null)
@@ -52,11 +52,11 @@ namespace Mental.Health.Adapter
             return path;
         }
 
-        public bool DeleteResult(TestType test, Result result)
+        public bool DeleteResultContent(TestType test, ResultContent result)
         {
             if (result?.Score == null || result?.Summary == null)
                 return false;
-            var results = GetAllResults(test);
+            var results = GetAllResultContents(test);
             var filePath = GetPath(test);
             var existingResult = results.Where(r => r.Score == result.Score).FirstOrDefault();
             if (existingResult == null)
@@ -72,9 +72,9 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(results, filePath);
         }
 
-        public bool DeleteResultByScore(TestType test, int score)
+        public bool DeleteResultContentByScore(TestType test, int score)
         {
-            var results = GetAllResults(test);
+            var results = GetAllResultContents(test);
             var filePath = GetPath(test);
             var existingResult = results.Where(r => r.Score == score).FirstOrDefault();
             if (existingResult == null)
@@ -90,9 +90,9 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(results, filePath);
         }
 
-        public List<Result> GetAllResults(TestType test)
+        public List<ResultContent> GetAllResultContents(TestType test)
         {
-            var results = new List<Result>();
+            var results = new List<ResultContent>();
             switch (test)
             {
                 case TestType.Anxiety:
@@ -108,25 +108,25 @@ namespace Mental.Health.Adapter
             return results;
         }
 
-        public Result GetResultByScore(TestType test, int score)
+        public ResultContent GetResultContentByScore(TestType test, int score)
         {
-            var results = GetAllResults(test);
+            var results = GetAllResultContents(test);
             var filePath = GetPath(test);
             var existingResult = results.Where(r => r.Score == score).FirstOrDefault();
             return existingResult;
         }
 
-        public bool UpdateResult(TestType test, Result result)
+        public bool UpdateResultContent(TestType test, ResultContent result)
         {
             if (result?.Score == null || result?.Summary == null)
                 return false;
-            var results = GetAllResults(test);
+            var results = GetAllResultContents(test);
             var filePath = GetPath(test);
             lock (_lockObj)
             {
                 var existingResult = results.Where(r => r.Score == result.Score).FirstOrDefault();
                 if (existingResult == null)
-                    return AddResult(test, result);
+                    return AddResultContent(test, result);
                 else
                 {
                     existingResult.ImageUrl = result.ImageUrl;
@@ -137,15 +137,15 @@ namespace Mental.Health.Adapter
             }
         }
 
-        private List<Result> GetResultsFromFile(string path)
+        private List<ResultContent> GetResultsFromFile(string path)
         {
             try
             {
-                return JsonFileHandler.ReadFile<Result>(path) ?? new List<Result>();
+                return JsonFileHandler.ReadFile<ResultContent>(path) ?? new List<ResultContent>();
             }
             catch
             {
-                return new List<Result>();
+                return new List<ResultContent>();
             }
         }
 

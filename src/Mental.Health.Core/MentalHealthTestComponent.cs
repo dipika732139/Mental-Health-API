@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -7,19 +8,47 @@ namespace Mental.Health.Core
 {
     public class MentalHealthTestComponent : IMentalHealthTestComponent
     {
-        public Task<Question> GetQuestion(Question question)
+        private readonly IMentalHealthTestAdapter _mentalHealthTestAdapter;
+        public MentalHealthTestComponent(IMentalHealthTestAdapter mentalHealthTestAdapter)
         {
-            throw new NotImplementedException();
+            _mentalHealthTestAdapter = mentalHealthTestAdapter;
+        }
+        public async Task<Question> GetQuestion(Question question)
+        {
+            return await _mentalHealthTestAdapter.GetQuestion(question.TestType, question.QuestionId);
         }
 
-        public Task<Result> GetResult(Result result)
+        public async Task<Report> GetResult(Report result)
         {
-            throw new NotImplementedException();
+            if (!await _mentalHealthTestAdapter.IsValidUser(result.UserId))
+                throw ServerSideExceptions.InvalidUser();
+            if(await _mentalHealthTestAdapter.GetReport(result.UserId, result.TestType, result.TestId) == null)
+            {
+                var scores = await _mentalHealthTestAdapter.GetScoresFromCache(result.UserId, result.TestType, result.TestId);
+                result.Score = GetAverage(scores);
+                if (await _mentalHealthTestAdapter.SaveResult(result))
+                    await _mentalHealthTestAdapter.RemoveScoresFromCache(result.UserId, result.TestType, result.TestId);
+            }
+            var report = await _mentalHealthTestAdapter.GetReport(result.UserId, result.TestType, result.TestId);
+            return await _mentalHealthTestAdapter.MapScoreWithDescription(report);
         }
 
-        public Task<bool> SaveResponse(Answer answer)
+        private double GetAverage(Dictionary<int, int> scores)
         {
-            throw new NotImplementedException();
+            double total = 0;
+            scores?.ToList().ForEach(score =>
+            {
+                total += score.Value;
+            });
+            return total / (scores?.Count ?? 1);
+        }
+
+        public async Task<bool> SaveResponse(Answer answer)
+        {
+            if (!await _mentalHealthTestAdapter.IsValidUser(answer.UserId))
+                throw ServerSideExceptions.InvalidUser();
+            var score = await _mentalHealthTestAdapter.GetScoreOfOption(answer.TestType, answer.QuestionNumber, answer.ChosenOption);
+            return await _mentalHealthTestAdapter.AddScoreToCache(answer.TestType, answer.UserId, answer.TestId, answer.QuestionNumber, score);
         }
     }
 }

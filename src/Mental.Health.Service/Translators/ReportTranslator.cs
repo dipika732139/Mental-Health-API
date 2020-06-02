@@ -1,8 +1,8 @@
 ﻿namespace Mental.Health.Service
 {
-    public static class ResultTranslator
+    public static class ReportTranslator
     {
-        public static ResultResponse ToResultResponse(this Result result)
+        public static ResultResponse ToResultResponse(this Report result)
         {
             return result == null
                 ? null

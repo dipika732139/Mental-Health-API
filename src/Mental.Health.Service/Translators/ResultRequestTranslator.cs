@@ -2,11 +2,11 @@
 {
     public static class ResultRequestTranslator
     {
-        public static Result ToResult(this ResultRequest request, string testId)
+        public static Report ToResult(this ResultRequest request, string testId)
         {
             return request == null
                 ? null
-                : new Result()
+                : new Report()
                 {
                     UserId = request.UserId,
                     TestType = request.TestType

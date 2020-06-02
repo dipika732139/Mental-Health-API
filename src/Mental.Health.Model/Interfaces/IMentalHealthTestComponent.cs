@@ -9,6 +9,6 @@ namespace Mental.Health
     {
         Task<Question> GetQuestion(Question question);
         Task<bool> SaveResponse(Answer answer);
-        Task<Result> GetResult(Result result);
+        Task<Report> GetResult(Report result);
     }
 }

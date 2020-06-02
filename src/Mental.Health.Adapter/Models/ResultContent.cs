@@ -1,6 +1,6 @@
 ﻿namespace Mental.Health.Adapter
 {
-    public class Result
+    public class ResultContent
     {
         public int Score { get; set; }
         public string ImageUrl { get; set; }
