@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="InvalidField" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="InvalidTestId" xml:space="preserve">
     <value>7</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="MissingField" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="RegistrationFailure" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
     <value>1</value>

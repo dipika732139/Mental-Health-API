@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Invalid Email or Email already exists</value>
+  </data>
   <data name="InvalidField" xml:space="preserve">
     <value>Invalid value provided for {0} in the request.</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>InvalidPassword</value>
   </data>
   <data name="InvalidTestId" xml:space="preserve">
     <value>The test is Invalid</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="MissingField" xml:space="preserve">
     <value>The value for the field {0} is required in the request.</value>
+  </data>
+  <data name="RegistrationFailure" xml:space="preserve">
+    <value>Registration Failed - Internal Server error.</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
     <value>Internal Server Error</value>

@@ -1,32 +1,38 @@
 [
   {
+    "EmailID": "pritybhudolia@gmail.com",
     "UserId": "prity",
     "UserName": "Prity Agarwal",
-    "Age": 26,
-    "Gender": 2
+    "Age": 27,
+    "Gender": 2,
+    "PhoneNumber": 9894163440,
+    "Country": "India",
+    "Pincode": 401101,
+    "Password": "Bhudolia",
+    "ConnectWithOthers": true
   },
   {
+    "EmailID": "komalsingh@gmail.com",
     "UserId": "komal",
     "UserName": "Komal Singh",
     "Age": 23,
-    "Gender": 2
+    "Gender": 2,
+    "PhoneNumber": 9894565640,
+    "Country": "India",
+    "Pincode": 400001,
+    "Password": "Komal@",
+    "ConnectWithOthers": true
   },
   {
-    "UserId": "sakshi",
-    "UserName": "Sakshi Tripathi",
-    "Age": 23,
-    "Gender": 2
-  },
-  {
-    "UserId": "surekha",
-    "UserName": "Surekha Krishna",
-    "Age": 26,
-    "Gender": 2
-  },
-  {
-    "UserId": "dips",
-    "UserName": "Dipika Mandal",
-    "Age": 23,
-    "Gender": 2
+    "EmailID": "pritykumari@yahoo.com",
+    "UserId": "PRITY1",
+    "UserName": "Prity Agarwal",
+    "Age": 27,
+    "Gender": 2,
+    "PhoneNumber": 9894913440,
+    "Country": "India",
+    "Pincode": 404101,
+    "Password": "Bhudolia",
+    "ConnectWithOthers": false
   }
 ]

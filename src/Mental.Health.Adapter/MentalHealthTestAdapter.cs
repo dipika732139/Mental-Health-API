@@ -38,9 +38,10 @@ namespace Mental.Health.Adapter
                 lock(_cache)
                     _cache[testTypeValue].Add((userId, testId), scores);
             }
-            if (scores.ContainsKey(questionNumber))
-                scores.Remove(questionNumber);
-            scores.Add(questionNumber, score);
+            //if (scores.ContainsKey(questionNumber))
+            //    scores.Remove(questionNumber);
+            //scores.Add(questionNumber, score);
+            scores[questionNumber] = score;
             return Task.FromResult(true);
         }
 
