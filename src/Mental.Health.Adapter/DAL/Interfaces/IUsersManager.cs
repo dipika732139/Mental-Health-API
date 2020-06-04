@@ -11,6 +11,11 @@ namespace Mental.Health.Adapter
         bool AddUser(User user);
         bool UpdateUser(User user);
         bool DeleteUserById(string userId);
+        bool ValidateUser(string id, string password);
+        User GetUserByEmailId(string emailId);
+        string GetUserIdByEmailId(string emailId);
+        bool IsValidUserId(string id);
+        bool isExistingUser(string emailId);
 
     }
 }
