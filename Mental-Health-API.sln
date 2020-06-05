@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1022
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Host", "1. Host", "{157B7B48-780E-4E32-AA3B-323F3C36ED58}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mental.Health.Service", "src\Mental.Health.Service\Mental.Health.Service.csproj", "{22E0D0A8-720A-479A-8605-5684796166FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mental.Health.Web", "src\Mental.Health.Web\Mental.Health.Web.csproj", "{C152A531-A0E3-4ED9-AF26-E61E549BF46E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceCalculator", "DistanceCalculator\DistanceCalculator.csproj", "{EDFC76A2-6083-441E-921D-0B78738B324D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,18 @@ Global
 		{C152A531-A0E3-4ED9-AF26-E61E549BF46E}.Release|x64.Build.0 = Release|Any CPU
 		{C152A531-A0E3-4ED9-AF26-E61E549BF46E}.Release|x86.ActiveCfg = Release|Any CPU
 		{C152A531-A0E3-4ED9-AF26-E61E549BF46E}.Release|x86.Build.0 = Release|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Debug|x64.Build.0 = Debug|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Debug|x86.Build.0 = Debug|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Release|x64.ActiveCfg = Release|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Release|x64.Build.0 = Release|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Release|x86.ActiveCfg = Release|Any CPU
+		{EDFC76A2-6083-441E-921D-0B78738B324D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
