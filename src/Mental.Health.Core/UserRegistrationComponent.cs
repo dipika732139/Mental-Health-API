@@ -16,6 +16,8 @@ namespace Mental.Health.Core
         {
             if (!await _userRegistrationAdapter.IsValidEmailID(user.EmailID))
                 throw ClientSideExceptions.InvalidEmail();
+            if(!await _userRegistrationAdapter.IsValidPincode(user.Pincode))
+                throw ClientSideExceptions.InvalidPincode();
             if (!await _userRegistrationAdapter.RegisterUserAccount(user.EmailID, user.Name, user.Password, user.Gender, user.Age,user.Country,user.PhoneNumber,user.Pincode,user.ConnectWithOthers))
                 throw ClientSideExceptions.RegistrationFailure();
             user.UserID= await _userRegistrationAdapter.GetUserId(user.EmailID);

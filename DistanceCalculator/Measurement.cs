@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Calculator
+{
+    public enum Measurement
+    {
+        Miles,
+        Kilometers
+    }
+}

@@ -36,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DistanceCalculator\DistanceCalculator.csproj" />
     <ProjectReference Include="..\Mental.Health.Model\Mental.Health.Model.csproj" />
   </ItemGroup>
 

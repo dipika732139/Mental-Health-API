@@ -16,6 +16,8 @@ namespace Mental.Health.Adapter
         string GetUserIdByEmailId(string emailId);
         bool IsValidUserId(string id);
         bool isExistingUser(string emailId);
+        User GetUserByIdOrEmail(string id);
+        bool ValidatePincode(long pincode);
 
     }
 }

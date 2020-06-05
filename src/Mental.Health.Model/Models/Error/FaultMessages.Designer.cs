@@ -88,6 +88,15 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pincode is Invalid. Please enter Indian state pincode..
+        /// </summary>
+        public static string InvalidPincode {
+            get {
+                return ResourceManager.GetString("InvalidPincode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The test is Invalid.
         /// </summary>
         public static string InvalidTestId {

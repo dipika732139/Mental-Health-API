@@ -126,6 +126,9 @@
   <data name="InvalidPassword" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="InvalidPincode" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="InvalidTestId" xml:space="preserve">
     <value>7</value>
   </data>

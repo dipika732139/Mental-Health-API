@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Mental.Health.Adapter.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -7,6 +8,7 @@ namespace Mental.Health.Adapter
     public class UsersManager : IUsersManager
     {
         private static List<User> _users;
+        private PincodeValidator pinvalidator;
         private static Dictionary<string, int> NameCountMap = new Dictionary<string, int>();
         private Regex emailPattern = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         public UsersManager()
@@ -16,13 +18,22 @@ namespace Mental.Health.Adapter
                 _users = JsonFileHandler.ReadFile<User>(KeyStore.FilePaths.Users) ?? new List<User>();
                 foreach(var user in _users)
                 {
-                    NameCountMap.Add(user.UserName.Split(" ")[0].ToUpper(), 1);
+                    var firstname = user.UserName.Split(" ")[0].ToUpper();
+                    if (NameCountMap.ContainsKey(firstname))
+                        NameCountMap[firstname] += 1;
+                    else
+                        NameCountMap[firstname] = 1;
                 }
+                pinvalidator = new PincodeValidator();
             }
             catch
             {
                 _users = new List<User>();
             }
+        }
+        public bool ValidatePincode(long pincode)
+        {
+            return pinvalidator.IsValidPinCode(pincode);
         }
         public bool AddUser(User user)
         {
@@ -125,6 +136,13 @@ namespace Mental.Health.Adapter
         {
             return _users.Exists(user => string.Equals(emailId, user.EmailID) && string.Equals(password, user.Password));
             
+        }
+        public User GetUserByIdOrEmail(string id)
+        {
+            if (emailPattern.Match(id).Success)
+                return GetUserByEmailId(id);
+            else
+                return GetUserById(id);
         }
 
         public User GetUserById(string userId)

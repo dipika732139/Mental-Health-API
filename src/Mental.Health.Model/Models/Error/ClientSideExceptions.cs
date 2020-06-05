@@ -32,6 +32,10 @@ namespace Mental.Health
         {
             return new BaseException(FaultCodes.RegistrationFailure, FaultMessages.RegistrationFailure, HttpStatusCode.Forbidden);
         }
+        public static BaseException InvalidPincode()
+        {
+            return new BaseException(FaultCodes.InvalidPincode, FaultMessages.InvalidPincode, HttpStatusCode.Forbidden);
+        }
 
     }
 }

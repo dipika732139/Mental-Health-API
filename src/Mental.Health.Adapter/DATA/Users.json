@@ -1,7 +1,7 @@
 [
   {
     "EmailID": "pritybhudolia@gmail.com",
-    "UserId": "prity",
+    "UserId": "PRITY",
     "UserName": "Prity Agarwal",
     "Age": 27,
     "Gender": 2,
@@ -13,7 +13,7 @@
   },
   {
     "EmailID": "komalsingh@gmail.com",
-    "UserId": "komal",
+    "UserId": "KOMAL",
     "UserName": "Komal Singh",
     "Age": 23,
     "Gender": 2,
@@ -31,8 +31,116 @@
     "Gender": 2,
     "PhoneNumber": 9894913440,
     "Country": "India",
-    "Pincode": 404101,
+    "Pincode": 401101,
     "Password": "Bhudolia",
-    "ConnectWithOthers": false
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "sahil.agarwal@yahoo.com",
+    "UserId": "SAHIL",
+    "UserName": "Sahil Agarwal",
+    "Age": 30,
+    "Gender": 2,
+    "PhoneNumber": 9890013440,
+    "Country": "India",
+    "Pincode": 401107,
+    "Password": "Sahil",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "ravibhudolia@yahoo.com",
+    "UserId": "RAVI",
+    "UserName": "Ravi Bhudolia",
+    "Age": 30,
+    "Gender": 1,
+    "PhoneNumber": 9890013440,
+    "Country": "India",
+    "Pincode": 400076,
+    "Password": "Ravi",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "kamalagarwal@yahoo.com",
+    "UserId": "KAMAL",
+    "UserName": "Kamal Agarwal",
+    "Age": 50,
+    "Gender": 1,
+    "PhoneNumber": 9890013440,
+    "Country": "India",
+    "Pincode": 401303,
+    "Password": "Kamal",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "sadhanaagarwal@yahoo.com",
+    "UserId": "SADHANA",
+    "UserName": "Sadhana Agarwal",
+    "Age": 45,
+    "Gender": 2,
+    "PhoneNumber": 9867013440,
+    "Country": "India",
+    "Pincode": 401303,
+    "Password": "Sadhana",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "ashasingh87@yahoo.com",
+    "UserId": "ASHA",
+    "UserName": "ASHA SINGH",
+    "Age": 42,
+    "Gender": 2,
+    "PhoneNumber": 9867324440,
+    "Country": "India",
+    "Pincode": 401303,
+    "Password": "ASHA",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "sweetigupta@yahoo.com",
+    "UserId": "SWEETY",
+    "UserName": "Sweeti Gupta",
+    "Age": 29,
+    "Gender": 2,
+    "PhoneNumber": 9867013880,
+    "Country": "India",
+    "Pincode": 400076,
+    "Password": "Sweety",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "richaagarwal@yahoo.com",
+    "UserId": "RICHA",
+    "UserName": "Richa Agarwal",
+    "Age": 30,
+    "Gender": 2,
+    "PhoneNumber": 9867987440,
+    "Country": "India",
+    "Pincode": 400092,
+    "Password": "Richa",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "nitinpandya@yahoo.com",
+    "UserId": "NITIN",
+    "UserName": "Nitin Pandya",
+    "Age": 32,
+    "Gender": 1,
+    "PhoneNumber": 9867877440,
+    "Country": "India",
+    "Pincode": 400060,
+    "Password": "Nitin",
+    "ConnectWithOthers": true
+  },
+  {
+    "EmailID": "nitingupta@gmail.com",
+    "UserId": "NITIN1",
+    "UserName": "Nitin Gupta",
+    "Age": 30,
+    "Gender": 1,
+    "PhoneNumber": 9889877440,
+    "Country": "India",
+    "Pincode": 401101,
+    "Password": "Nitin",
+    "ConnectWithOthers": true
   }
 ]

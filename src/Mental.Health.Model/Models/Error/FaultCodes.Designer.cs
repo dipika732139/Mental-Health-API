@@ -88,6 +88,15 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 11.
+        /// </summary>
+        public static string InvalidPincode {
+            get {
+                return ResourceManager.GetString("InvalidPincode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 7.
         /// </summary>
         public static string InvalidTestId {
