@@ -16,7 +16,7 @@ namespace Mental.Health.Adapter
                 _users = JsonFileHandler.ReadFile<User>(KeyStore.FilePaths.Users) ?? new List<User>();
                 foreach(var user in _users)
                 {
-                    NameCountMap.Add(user.UserName.Split(" ")[0].ToUpper(), 1);
+                    NameCountMap.TryAdd(user.UserName.Split(" ")[0].ToUpper(), 1);
                 }
             }
             catch
