@@ -5,7 +5,7 @@
         public static QuestionResponse ToQuestionResponse(this Question question)
         {
             return question == null
-                ? null
+                ? new QuestionResponse()
                 : new QuestionResponse()
                 {
                     Question = question.Statement,
