@@ -8,8 +8,8 @@ namespace Mental.Health
         public static class FilePaths
         {
             //to be used while deploying
-            //public static readonly string FolderPath = Environment.CurrentDirectory;
-            public static readonly string FolderPath = Path.Combine(Environment.CurrentDirectory,@"..", "Mental.Health.Adapter");
+            public static readonly string FolderPath = Path.Combine(System.Reflection.Assembly.GetEntryAssembly().Location ,@"..");
+            //public static readonly string FolderPath = Path.Combine(Environment.CurrentDirectory,@"..", "Mental.Health.Adapter");
             public static class Questions
             {
                 public static readonly string Anxiety = FolderPath + "\\DATA\\Questions\\Anxiety.json";

@@ -1,7 +1,7 @@
 [
   {
     "Number": 1,
-    "Question": "	I have a persistent feeling of emptiness",
+    "Question": "I feel agitated or restless (I pace, am unable to stay calm, or need to move constantly).",
     "Options": [
       {
         "Number": 1,
@@ -32,7 +32,7 @@
   },
   {
     "Number": 2,
-    "Question": "I feel bad about myself",
+    "Question": "I feel worn out",
     "Options": [
       {
         "Number": 1,
@@ -94,7 +94,7 @@
   },
   {
     "Number": 4,
-    "Question": "I have recurrent thoughts about ending my life",
+    "Question": "When I wake up in the morning, I feel like there is nothing to look forward to",
     "Options": [
       {
         "Number": 1,
@@ -125,7 +125,7 @@
   },
   {
     "Number": 5,
-    "Question": "Even when forces beyond my control prevent me from reaching a goal, I still find a way to blame myself",
+    "Question": "I often feel that things are going my way",
     "Options": [
       {
         "Number": 1,
@@ -156,7 +156,7 @@
   },
   {
     "Number": 6,
-    "Question": "I keep myself up at night thinking about the things going on in my life",
+    "Question": "I think about death",
     "Options": [
       {
         "Number": 1,
@@ -187,7 +187,7 @@
   },
   {
     "Number": 7,
-    "Question": "If I am struggling in work or in school, I tend to think it is because I am not smart enough",
+    "Question": "I am able to control irritation in my life very often",
     "Options": [
       {
         "Number": 1,
@@ -218,7 +218,7 @@
   },
   {
     "Number": 8,
-    "Question": "I feel like crying for no apparent reason",
+    "Question": "I get mad at myself if I do not achieve the goals I have set out to reach",
     "Options": [
       {
         "Number": 1,
@@ -249,7 +249,7 @@
   },
   {
     "Number": 9,
-    "Question": "I feel I don't deserve to be loved",
+    "Question": "When something is bothering me, I cannot stop thinking about it",
     "Options": [
       {
         "Number": 1,
@@ -280,7 +280,7 @@
   },
   {
     "Number": 10,
-    "Question": "I feel physically weak",
+    "Question": "I often feel that difficulties are piling up so high that i cannot overcome them",
     "Options": [
       {
         "Number": 1,

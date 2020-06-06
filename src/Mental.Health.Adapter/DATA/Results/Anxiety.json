@@ -1,20 +1,32 @@
 [
   {
-    "Score": 0,
-    "ImageUrl": "abc,jpg",
-    "Description": "Mood description",
-    "Summary": "summary"
-  },
-  {
     "Score": 1,
     "ImageUrl": "abc,jpg",
-    "Description": "Mood description",
+    "Description": "No sign of anxiety",
     "Summary": "summary"
   },
   {
     "Score": 2,
     "ImageUrl": "abc,jpg",
-    "Description": "Mood description",
+    "Description": "Slightly anxious",
+    "Summary": "summary"
+  },
+  {
+    "Score": 3,
+    "ImageUrl": "abc,jpg",
+    "Description": "Fairly Anxious",
+    "Summary": "summary"
+  },
+  {
+    "Score": 4,
+    "ImageUrl": "abc,jpg",
+    "Description": "Moderately anxious",
+    "Summary": "summary"
+  },
+  {
+    "Score": 5,
+    "ImageUrl": "abc,jpg",
+    "Description": "Very Anxious",
     "Summary": "summary"
   }
 ]
