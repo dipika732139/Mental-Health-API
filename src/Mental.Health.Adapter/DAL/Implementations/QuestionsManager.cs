@@ -10,11 +10,17 @@ namespace Mental.Health.Adapter
         private static List<QuestionModel> _anxietyQuestions;
         private static List<QuestionModel> _depressionQuestions;
         private static List<QuestionModel> _stressQuestions;
+        private static List<AnalyzingQuestion> _analyzingQuestions;
         public QuestionsManager()
         {
             _anxietyQuestions = GetQuestionsFromFile(GetPath(TestType.Anxiety));
             _depressionQuestions = GetQuestionsFromFile(GetPath(TestType.Depression));
             _stressQuestions = GetQuestionsFromFile(GetPath(TestType.Stress));
+            try
+            {
+                _analyzingQuestions = JsonFileHandler.ReadFile<AnalyzingQuestion>(KeyStore.FilePaths.Questions.Analyze) ?? new List<AnalyzingQuestion>();
+            }
+            catch { }
             _lockObj = new object();
         }
 
@@ -128,6 +134,11 @@ namespace Mental.Health.Adapter
                 existingQuestion.Options = question.Options;
                 return JsonFileHandler.WriteInFile(GetAllQuestions(test), GetPath(test));
             }
+        }
+
+        public AnalyzingQuestion GetQuestionById(string questionId)
+        {
+            return _analyzingQuestions.Where(question => string.Equals(question.QuestionId, questionId)).FirstOrDefault();
         }
     }
 }

@@ -94,6 +94,13 @@ namespace Mental.Health.Adapter
                 existingUser.UserName = user.UserName;
                 existingUser.Gender = user.Gender;
                 existingUser.Age = user.Age;
+                existingUser.EmailID = user.EmailID;
+                existingUser.PhoneNumber = user.PhoneNumber;
+                existingUser.Country = user.Country;
+                existingUser.Pincode = user.Pincode;
+                existingUser.Password = user.Password;
+                existingUser.ConnectWithOthers = user.ConnectWithOthers;
+                existingUser.AnalyzedValue = user.AnalyzedValue;
                 return JsonFileHandler.WriteInFile(_users, KeyStore.FilePaths.Users);
             }
         }
@@ -135,6 +142,13 @@ namespace Mental.Health.Adapter
         public User GetUserByEmailId(string emailId)
         {
             return string.IsNullOrEmpty(emailId) ? null : _users.Where(user => string.Equals(emailId, user.EmailID)).FirstOrDefault();
+        }
+
+        public bool SaveAnalyzedValue(string userId, string analyzedValue)
+        {
+            var user = GetUserById(userId);
+            user.AnalyzedValue = analyzedValue;
+            return JsonFileHandler.WriteInFile(_users, KeyStore.FilePaths.Users);
         }
     }
 }

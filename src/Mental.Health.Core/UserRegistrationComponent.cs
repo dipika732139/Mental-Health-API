@@ -19,9 +19,9 @@ namespace Mental.Health.Core
             if (!await _userRegistrationAdapter.RegisterUserAccount(user.EmailID, user.Name, user.Password, user.Gender, user.Age,user.Country,user.PhoneNumber,user.Pincode,user.ConnectWithOthers))
                 throw ClientSideExceptions.RegistrationFailure();
             user.UserID= await _userRegistrationAdapter.GetUserId(user.EmailID);
+            await _userRegistrationAdapter.RegisterUserForReport(user.UserID);
             return user.UserID;
         }
-
         public async Task<bool> LoginUser(string UserID, string Password)
         {
             if (!await _userRegistrationAdapter.IsValidUser(UserID))

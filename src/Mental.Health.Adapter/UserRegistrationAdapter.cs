@@ -7,10 +7,12 @@ namespace Mental.Health.Adapter
 {
     public class UserRegistrationAdapter : IUserRegistrationAdapter
     {
+        private IUserReportsManager _userReportsManager;
         private IUsersManager _usersManager;
-        public UserRegistrationAdapter(IUsersManager usersManager)
+        public UserRegistrationAdapter(IUsersManager usersManager,IUserReportsManager userReportsManager)
         {
             _usersManager = usersManager;
+            _userReportsManager = userReportsManager;
         }
         public Task<string> GetUserId(string EmailID)
         {
@@ -49,6 +51,10 @@ namespace Mental.Health.Adapter
                 Password = Password,
                 ConnectWithOthers = ConnectWithOthers
             }));
+        }
+        public Task<bool> RegisterUserForReport(String userId)
+        {
+            return Task.FromResult(_userReportsManager.CreateNewUserReportByUserId(userId));
         }
     }
 }

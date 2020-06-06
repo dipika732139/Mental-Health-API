@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="DATA\Questions\Analyze.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="DATA\Questions\Anxiety.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

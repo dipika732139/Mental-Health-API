@@ -1,11 +1,11 @@
-﻿namespace Mental.Health.Service
+﻿namespace Mental.Health.Service.Analyze
 {
-    public static class QuestionTranslator
+    public static class AnalyzingQuestionTranslator
     {
-        public static QuestionResponse ToQuestionResponse(this Question question)
+        public static QuestionResponse ToQuestionResponse(this AnalyzingQuestion question)
         {
             return question == null
-                ? null
+                ? new QuestionResponse()
                 : new QuestionResponse()
                 {
                     Question = question.Statement,
