@@ -25,7 +25,10 @@ namespace Mental.Health.Service
                 .WithMessage(ErrorMessages.MissingField("Password"))
                 .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("Password"));
+                .WithMessage(ErrorMessages.InvalidField("Password"))
+                .Must(x => x.Length >= 6)
+                .WithErrorCode(FaultCodes.PasswordTooShort)
+                .WithMessage(FaultMessages.PasswordTooShort); 
         }
     }
 }

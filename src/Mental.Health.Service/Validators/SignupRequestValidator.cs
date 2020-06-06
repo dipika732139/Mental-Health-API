@@ -23,6 +23,7 @@ namespace Mental.Health.Service
                .NotEmpty()
                .WithErrorCode(FaultCodes.InvalidField)
                .WithMessage(ErrorMessages.InvalidField("Name"));
+
             RuleFor(x => x.Password)
             .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotNull()
@@ -30,26 +31,30 @@ namespace Mental.Health.Service
                 .WithMessage(ErrorMessages.MissingField("Password"))
                 .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("Password"));
+                .WithMessage(ErrorMessages.InvalidField("Password"))
+                .Must(x => x.Length >= 6)
+                .WithErrorCode(FaultCodes.PasswordTooShort)
+                .WithMessage(FaultMessages.PasswordTooShort);
+
+
             RuleFor(x => x.EmailID)
-                .Must(IsValidEmailId)
-                .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("EmailID"))
+           .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotNull()
                 .WithErrorCode(FaultCodes.MissingField)
                 .WithMessage(ErrorMessages.MissingField("EmailID"))
                 .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("EmailID"));          
+                .WithMessage(ErrorMessages.InvalidField("EmailID"))
+                .Must(IsValidEmailId)
+                .WithErrorCode(FaultCodes.InvalidField)
+                .WithMessage(ErrorMessages.InvalidField("EmailID"));
 
             RuleFor(x => x.Age)
             .Cascade(CascadeMode.StopOnFirstFailure)
-                .NotNull()
-                .WithErrorCode(FaultCodes.MissingField)
-                .WithMessage(ErrorMessages.MissingField("Age"))
-                .NotEmpty()
+                .Must(x => x > 0)
                 .WithErrorCode(FaultCodes.InvalidField)
                 .WithMessage(ErrorMessages.InvalidField("Age"));
+
             RuleFor(x => x.Gender)
             .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotNull()
@@ -58,6 +63,7 @@ namespace Mental.Health.Service
                 .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
                 .WithMessage(ErrorMessages.InvalidField("Gender"));
+
             RuleFor(x => x.Country)
             .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotNull()
@@ -66,24 +72,14 @@ namespace Mental.Health.Service
                 .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
                 .WithMessage(ErrorMessages.InvalidField("Country"));
+
             RuleFor(x => x.Pincode.ToString())
                 .Must(IsValidPincode)
                 .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("Pincode"))
-                .NotNull()
-                .WithErrorCode(FaultCodes.MissingField)
-                .WithMessage(ErrorMessages.MissingField("Pincode"))
-                .NotEmpty()
-                .WithErrorCode(FaultCodes.InvalidField)
                 .WithMessage(ErrorMessages.InvalidField("Pincode"));
+
             RuleFor(x => x.PhoneNumber.ToString())
                 .Must(IsValidMobileNumber)
-                .WithErrorCode(FaultCodes.InvalidField)
-                .WithMessage(ErrorMessages.InvalidField("PhoneNumber"))
-                .NotNull()
-                .WithErrorCode(FaultCodes.MissingField)
-                .WithMessage(ErrorMessages.MissingField("PhoneNumber"))
-                .NotEmpty()
                 .WithErrorCode(FaultCodes.InvalidField)
                 .WithMessage(ErrorMessages.InvalidField("PhoneNumber"));
 
