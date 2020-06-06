@@ -34,5 +34,41 @@
     "Pincode": 404101,
     "Password": "Bhudolia",
     "ConnectWithOthers": false
+  },
+  {
+    "EmailID": "dipika@gmail.com",
+    "UserId": "DIPIKA",
+    "UserName": "Dipika Mandal",
+    "Age": 23,
+    "Gender": 2,
+    "PhoneNumber": 8777432785,
+    "Country": "India",
+    "Pincode": 732139,
+    "Password": "abcdef",
+    "ConnectWithOthers": false
+  },
+  {
+    "EmailID": "dipika@gmil.com",
+    "UserId": "DIPIKA1",
+    "UserName": "Dipika Mandal",
+    "Age": 23,
+    "Gender": 2,
+    "PhoneNumber": 8777432785,
+    "Country": "India",
+    "Pincode": 732139,
+    "Password": "abcdef",
+    "ConnectWithOthers": false
+  },
+  {
+    "EmailID": "dipika@gml.com",
+    "UserId": "DIPIKA2",
+    "UserName": "Dipika Mandal",
+    "Age": 23,
+    "Gender": 2,
+    "PhoneNumber": 8777432785,
+    "Country": "India",
+    "Pincode": 732139,
+    "Password": "abcdef",
+    "ConnectWithOthers": false
   }
 ]
