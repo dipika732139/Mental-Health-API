@@ -15,6 +15,7 @@ namespace Mental.Health
                 public static readonly string Anxiety = FolderPath + "\\DATA\\Questions\\Anxiety.json";
                 public static readonly string Depression = FolderPath + "\\DATA\\Questions\\Depression.json";
                 public static readonly string Stress = FolderPath + "\\DATA\\Questions\\Stress.json";
+                public static readonly string Analyze = FolderPath + "\\DATA\\Questions\\Analyze.json";
             }
             public static class Results
             {

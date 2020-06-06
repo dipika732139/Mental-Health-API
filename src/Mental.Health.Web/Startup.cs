@@ -35,6 +35,9 @@ namespace Mental.Health.Web
             services.AddTransient<IUserRegistrationService, UserRegistrationService>();
             services.AddTransient<IUserRegistrationComponent, UserRegistrationComponent>();
             services.AddTransient<IUserRegistrationAdapter, UserRegistrationAdapter>();
+            services.AddTransient<IUserAnalyzingService, UserAnalyzingService>();
+            services.AddTransient<IUserAnalyzingComponent, UserAnalyzingComponent>();
+            services.AddTransient<IUserAnalyzingAdapter, Adapter.UserAnalyzingAdapter>();
             services.AddSingleton<IQuestionsManager, QuestionsManager>();
             services.AddSingleton<IUserReportsManager, UserReportsManager>();
             services.AddSingleton<IUsersManager, UsersManager>();

@@ -14,5 +14,6 @@ namespace Mental.Health.Adapter
         public long Pincode { get; set; }
         public string Password { get; set; }
         public bool ConnectWithOthers { get; set; }
+        public string AnalyzedValue { get; set; }
     }
 }

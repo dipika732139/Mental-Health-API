@@ -65,10 +65,10 @@ namespace Mental.Health.Adapter
                     result = userReport?.AnxietyReport?.Where(report => string.Equals(testId, report.TestId)).FirstOrDefault();
                     break;
                 case TestType.Depression:
-                    result = userReport?.AnxietyReport?.Where(report => string.Equals(testId, report.TestId)).FirstOrDefault();
+                    result = userReport?.DepressionReport?.Where(report => string.Equals(testId, report.TestId)).FirstOrDefault();
                     break;
                 case TestType.Stress:
-                    result = userReport?.AnxietyReport?.Where(report => string.Equals(testId, report.TestId)).FirstOrDefault();
+                    result = userReport?.StressReport?.Where(report => string.Equals(testId, report.TestId)).FirstOrDefault();
                     break;
             }
             return Task.FromResult(result.ToReport(userId,testType));
@@ -98,7 +98,7 @@ namespace Mental.Health.Adapter
 
         public Task<bool> IsValidUser(string userId)
         {
-            return Task.FromResult(_usersManager.GetUserById(userId) != null);
+            return Task.FromResult(_usersManager.IsValidUserId(userId));
         }
 
         public Task<Report> MapScoreWithDescription(Report report)

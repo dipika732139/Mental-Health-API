@@ -11,13 +11,19 @@ namespace Mental.Health.Adapter
         {
             try
             {
-                _userReports = JsonFileHandler.ReadFile<UserReport>(KeyStore.FilePaths.UserReports) ?? new List<UserReport>();
+                LoadUsersReport();
             }
             catch
             {
                 _userReports = new List<UserReport>();
             }
         }
+
+        private void LoadUsersReport()
+        {
+            _userReports = JsonFileHandler.ReadFile<UserReport>(KeyStore.FilePaths.UserReports) ?? new List<UserReport>();
+        }
+
         public bool AddUserTestResultToReport(string userId, TestType test, TestResult result)
         {
             var userReport = GetUserReportByUserId(userId);
@@ -98,9 +104,13 @@ namespace Mental.Health.Adapter
             return JsonFileHandler.WriteInFile(_userReports, KeyStore.FilePaths.UserReports);
         }
 
-        public UserReport GetUserReportByUserId(string userId) => string.IsNullOrEmpty(userId) ?
-                                                                    null
-                                                                    : _userReports.Where(userReport => string.Equals(userId, userReport.UserId)).FirstOrDefault();
+        public UserReport GetUserReportByUserId(string userId)
+        {
+           var report =  string.IsNullOrEmpty(userId) ? null: (_userReports).Where(userReport => string.Equals(userId, userReport.UserId)).FirstOrDefault();
+            if (report == null)
+                LoadUsersReport();
+            return string.IsNullOrEmpty(userId) ? null : (_userReports).Where(userReport => string.Equals(userId, userReport.UserId)).FirstOrDefault();
+        }
 
     }
 }

@@ -1,42 +1,6 @@
 [
   {
-    "EmailID": "pritybhudolia@gmail.com",
-    "UserId": "prity",
-    "UserName": "Prity Agarwal",
-    "Age": 27,
-    "Gender": 2,
-    "PhoneNumber": 9894163440,
-    "Country": "India",
-    "Pincode": 401101,
-    "Password": "Bhudolia",
-    "ConnectWithOthers": true
-  },
-  {
-    "EmailID": "komalsingh@gmail.com",
-    "UserId": "komal",
-    "UserName": "Komal Singh",
-    "Age": 23,
-    "Gender": 2,
-    "PhoneNumber": 9894565640,
-    "Country": "India",
-    "Pincode": 400001,
-    "Password": "Komal@",
-    "ConnectWithOthers": true
-  },
-  {
-    "EmailID": "pritykumari@yahoo.com",
-    "UserId": "PRITY1",
-    "UserName": "Prity Agarwal",
-    "Age": 27,
-    "Gender": 2,
-    "PhoneNumber": 9894913440,
-    "Country": "India",
-    "Pincode": 404101,
-    "Password": "Bhudolia",
-    "ConnectWithOthers": false
-  },
-  {
-    "EmailID": "dipika@gmail.com",
+    "EmailID": "abc123@gmail.com",
     "UserId": "DIPIKA",
     "UserName": "Dipika Mandal",
     "Age": 23,
@@ -44,31 +8,8 @@
     "PhoneNumber": 8777432785,
     "Country": "India",
     "Pincode": 732139,
-    "Password": "abcdef",
-    "ConnectWithOthers": false
-  },
-  {
-    "EmailID": "dipika@gmil.com",
-    "UserId": "DIPIKA1",
-    "UserName": "Dipika Mandal",
-    "Age": 23,
-    "Gender": 2,
-    "PhoneNumber": 8777432785,
-    "Country": "India",
-    "Pincode": 732139,
-    "Password": "abcdef",
-    "ConnectWithOthers": false
-  },
-  {
-    "EmailID": "dipika@gml.com",
-    "UserId": "DIPIKA2",
-    "UserName": "Dipika Mandal",
-    "Age": 23,
-    "Gender": 2,
-    "PhoneNumber": 8777432785,
-    "Country": "India",
-    "Pincode": 732139,
-    "Password": "abcdef",
-    "ConnectWithOthers": false
+    "Password": "DIP@123",
+    "ConnectWithOthers": false,
+    "AnalyzedValue": "1.1.2.3"
   }
 ]

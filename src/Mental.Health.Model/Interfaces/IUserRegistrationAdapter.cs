@@ -12,6 +12,6 @@ namespace Mental.Health
         Task<bool> RegisterUserAccount(string EmailID, string Name, string Password, string Gender, int Age, string Country, long PhoneNumber, long Pincode, bool ConnectWithOthers);
         Task<string> GetUserId(string EmailID);
         Task<bool> LoginUser(string UserID, string Password);
-       
+        Task<bool> RegisterUserForReport(String userId);
     }
 }
