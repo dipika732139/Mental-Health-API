@@ -2,10 +2,8 @@
 {
     public enum Gender
     {
-        PreferNotToSay,
+        Others,
         Male,
-        Female,
-        TransGender,
-        NonBinary
+        Female
     }
 }

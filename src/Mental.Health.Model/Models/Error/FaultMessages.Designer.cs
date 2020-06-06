@@ -19,7 +19,7 @@ namespace Mental.Health.Model.Models.Error {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class FaultMessages {
@@ -70,7 +70,7 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid value provided for {0} in the request..
+        ///   Looks up a localized string similar to Invalid value provided for {0}..
         /// </summary>
         public static string InvalidField {
             get {
@@ -115,11 +115,20 @@ namespace Mental.Health.Model.Models.Error {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The value for the field {0} is required in the request..
+        ///   Looks up a localized string similar to The value for the field {0} is required..
         /// </summary>
         public static string MissingField {
             get {
                 return ResourceManager.GetString("MissingField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lenth of password should be more than 6.
+        /// </summary>
+        public static string PasswordTooShort {
+            get {
+                return ResourceManager.GetString("PasswordTooShort", resourceCulture);
             }
         }
         

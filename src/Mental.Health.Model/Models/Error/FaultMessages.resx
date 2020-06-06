@@ -121,7 +121,7 @@
     <value>Invalid Email or Email already exists</value>
   </data>
   <data name="InvalidField" xml:space="preserve">
-    <value>Invalid value provided for {0} in the request.</value>
+    <value>Invalid value provided for {0}.</value>
   </data>
   <data name="InvalidPassword" xml:space="preserve">
     <value>InvalidPassword</value>
@@ -136,7 +136,10 @@
     <value>Failed to read json file</value>
   </data>
   <data name="MissingField" xml:space="preserve">
-    <value>The value for the field {0} is required in the request.</value>
+    <value>The value for the field {0} is required.</value>
+  </data>
+  <data name="PasswordTooShort" xml:space="preserve">
+    <value>Lenth of password should be more than 6</value>
   </data>
   <data name="RegistrationFailure" xml:space="preserve">
     <value>Registration Failed - Internal Server error.</value>
