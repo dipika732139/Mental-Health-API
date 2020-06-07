@@ -1,32 +1,32 @@
 [
   {
     "Score": 1,
-    "ImageUrl": "abc,jpg",
-    "Description": "No sign of Stress",
-    "Summary": "summary"
+    "ImageUrl": "",
+    "Description": "No sign of stress",
+    "Summary": "Your answers suggest that you have no symptoms of stress. You are more like a free bird enjoying your life. keep smiling."
   },
   {
     "Score": 2,
-    "ImageUrl": "abc,jpg",
-    "Description": "Slightly stressed",
-    "Summary": "summary"
+    "ImageUrl": "",
+    "Description": "Very Slightly depressed",
+    "Summary": "Your answers suggest that you have very few of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
   },
   {
     "Score": 3,
-    "ImageUrl": "abc,jpg",
-    "Description": "Fairly stressed",
-    "Summary": "summary"
+    "ImageUrl": "",
+    "Description": "Mild Indication of stress",
+    "Summary": "Your answers suggest that you have some of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
   },
   {
     "Score": 4,
-    "ImageUrl": "abc,jpg",
-    "Description": "Moderately stressed",
-    "Summary": "summary"
+    "ImageUrl": "",
+    "Description": "Moderate Indication of stress",
+    "Summary": "Your answers suggest that you have several of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
   },
   {
     "Score": 5,
-    "ImageUrl": "abc,jpg",
-    "Description": "Very stressed",
-    "Summary": "summary"
+    "ImageUrl": "",
+    "Description": "High Indication of stress",
+    "Summary": "Your answers suggest that you have many of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
   }
 ]
