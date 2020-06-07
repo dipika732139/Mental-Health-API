@@ -16,7 +16,7 @@ namespace Mental.Health.Web.Controllers
         {
             _mentalHealthService = mentalHealthService;
         }
-        [HttpGet("question")]
+        [HttpPost("question")]
         public async Task<ActionResult> GetQuestion([FromBody] QuestionRequest request)
         {
             var result = await _mentalHealthService.GetQuestion(request);
@@ -28,7 +28,7 @@ namespace Mental.Health.Web.Controllers
             var result = await _mentalHealthService.SaveAnswer(request, testId);
             return result == null ? (ActionResult)BadRequest() : Ok(result);
         }
-        [HttpGet("result/{testId}")]
+        [HttpPost("result/{testId}")]
         public async Task<ActionResult> GetResult([FromBody] ResultRequest request, string testId)
         {
             var result = await _mentalHealthService.GetResult(request, testId);
