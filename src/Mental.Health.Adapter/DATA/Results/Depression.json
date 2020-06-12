@@ -1,31 +1,31 @@
 [
   {
     "Score": 1,
-    "ImageUrl": "",
+    "ImageUrl": null,
     "Description": "No sign of depression",
     "Summary": "Your answers suggest that you have no symptoms of depression. You are more like a free bird enjoying your life. keep smiling."
   },
   {
     "Score": 2,
-    "ImageUrl": "",
+    "ImageUrl": "www.youtube.com/watch?v=MOiaSc38ZeI,www.youtube.com/watch?v=8Su5VtKeXU8",
     "Description": "Very Slightly depressed",
     "Summary": "Your answers suggest that you have very few of the same symptoms common in people suffering from depression. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
   },
   {
     "Score": 3,
-    "ImageUrl": "",
+    "ImageUrl": "www.youtube.com/watch?v=ga-MniJxQz8,www.youtube.com/watch?v=chE00kGtg48,www.youtube.com/watch?v=_re6AX3Mi4s",
     "Description": "Mild Indication of Depression",
     "Summary": "Your answers suggest that you have some of the same symptoms common in people suffering from depression. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
   },
   {
     "Score": 4,
-    "ImageUrl": "",
+    "ImageUrl": "www.youtube.com/watch?v=Vw1_AEaoXtM,www.youtube.com/watch?v=LsQDC-sVb64,www.youtube.com/watch?v=VSYuYE1kp-U",
     "Description": "Moderate Indication of Depression",
     "Summary": "Your answers suggest that you have several of the same symptoms common in people suffering from depression. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
   },
   {
     "Score": 5,
-    "ImageUrl": "",
+    "ImageUrl": null,
     "Description": "High Indication of Depression",
     "Summary": "Your answers suggest that you have many of the same symptoms common in people suffering from depression. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
   }

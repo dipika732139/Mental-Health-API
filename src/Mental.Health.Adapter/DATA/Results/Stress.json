@@ -1,31 +1,31 @@
 [
   {
     "Score": 1,
-    "ImageUrl": "",
+    "ImageUrl": null,
     "Description": "No sign of stress",
     "Summary": "Your answers suggest that you have no symptoms of stress. You are more like a free bird enjoying your life. keep smiling."
   },
   {
     "Score": 2,
-    "ImageUrl": "",
+    "ImageUrl": "www.youtube.com/watch?v=m3-O7gPsQK0,www.youtube.com/watch?v=Wemm-i6XHr8",
     "Description": "Very Slightly depressed",
     "Summary": "Your answers suggest that you have very few of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
   },
   {
     "Score": 3,
-    "ImageUrl": "",
+    "ImageUrl": "www.youtube.com/watch?v=75PUjUsGsQQ,www.youtube.com/watch?v=FJ77DYyfI0w,www.youtube.com/watch?v=okf2W7d1-l4",
     "Description": "Mild Indication of stress",
     "Summary": "Your answers suggest that you have some of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
   },
   {
     "Score": 4,
-    "ImageUrl": "",
+    "ImageUrl": "www.youtube.com/watch?v=TWI639oEzmE,www.youtube.com/watch?v=cI4ryatVkKw,www.youtube.com/watch?v=ClqPtWzozXs",
     "Description": "Moderate Indication of stress",
     "Summary": "Your answers suggest that you have several of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
   },
   {
     "Score": 5,
-    "ImageUrl": "",
+    "ImageUrl": null,
     "Description": "High Indication of stress",
     "Summary": "Your answers suggest that you have many of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
   }

@@ -1,7 +1,7 @@
 [
   {
     "Number": 1,
-    "Question": "I feel agitated or restless (I pace, am unable to stay calm, or need to move constantly).",
+    "Question": "The outbreak of COVID-19 has made me more anxious and induced a feeling of fear from being affected by it",
     "Options": [
       {
         "Number": 1,
@@ -32,7 +32,7 @@
   },
   {
     "Number": 2,
-    "Question": "I feel worn out",
+    "Question": "I feel agitated or restless (I pace, am unable to stay calm, or need to move constantly). because of the rise in the number of active cases",
     "Options": [
       {
         "Number": 1,
@@ -63,7 +63,7 @@
   },
   {
     "Number": 3,
-    "Question": "I feel so guilty that I can barely take it",
+    "Question": "I feel worn out all the time and am tired with washing my hands multiple times",
     "Options": [
       {
         "Number": 1,
@@ -187,7 +187,7 @@
   },
   {
     "Number": 7,
-    "Question": "I am able to control irritation in my life very often",
+    "Question": "I feel so guilty that I can barely take it",
     "Options": [
       {
         "Number": 1,
@@ -218,7 +218,7 @@
   },
   {
     "Number": 8,
-    "Question": "I get mad at myself if I do not achieve the goals I have set out to reach",
+    "Question": "I am able to control irritation in my life very often",
     "Options": [
       {
         "Number": 1,
@@ -249,7 +249,7 @@
   },
   {
     "Number": 9,
-    "Question": "When something is bothering me, I cannot stop thinking about it",
+    "Question": "I get mad at myself if I do not achieve the goals I have set out to reach",
     "Options": [
       {
         "Number": 1,
@@ -280,6 +280,37 @@
   },
   {
     "Number": 10,
+    "Question": "When something is bothering me, I cannot stop thinking about it",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 11,
     "Question": "I often feel that difficulties are piling up so high that i cannot overcome them",
     "Options": [
       {

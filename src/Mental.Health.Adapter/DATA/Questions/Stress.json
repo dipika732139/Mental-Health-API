@@ -1,7 +1,7 @@
 [
   {
     "Number": 1,
-    "Question": "I have been upset very often due to something that happened unexpectedly in my Life",
+    "Question": "I am unable to manage personal as well as my professional life because of the work from home issues after COVID-19 outbreak",
     "Options": [
       {
         "Number": 1,
@@ -32,7 +32,7 @@
   },
   {
     "Number": 2,
-    "Question": "I often feel that I'm unable to control important things in my life",
+    "Question": "I have been stressed due to COVID-19 cases which are very near to my locality",
     "Options": [
       {
         "Number": 1,
@@ -63,7 +63,7 @@
   },
   {
     "Number": 3,
-    "Question": "I often feel anxious and nervous",
+    "Question": "I often feel that I'm unable to control important things in my life",
     "Options": [
       {
         "Number": 1,
@@ -94,7 +94,7 @@
   },
   {
     "Number": 4,
-    "Question": "I often feel confident about my ability to handle my personal problems",
+    "Question": "I often feel anxious and nervous",
     "Options": [
       {
         "Number": 1,
@@ -125,7 +125,7 @@
   },
   {
     "Number": 5,
-    "Question": "I often feel that things are going my way",
+    "Question": "I often feel confident about my ability to handle my personal problems",
     "Options": [
       {
         "Number": 1,
@@ -156,7 +156,7 @@
   },
   {
     "Number": 6,
-    "Question": "I often feel that i am unable to cope with all the things that i have to do",
+    "Question": "I often feel that things are going my way",
     "Options": [
       {
         "Number": 1,
@@ -187,7 +187,7 @@
   },
   {
     "Number": 7,
-    "Question": "I am able to control irritation in my life very often",
+    "Question": "I often feel that i am unable to cope with all the things that i have to do",
     "Options": [
       {
         "Number": 1,
@@ -218,7 +218,7 @@
   },
   {
     "Number": 8,
-    "Question": "I often feel fatigue and/or struggle to fall or stay asleep?",
+    "Question": "I am able to control irritation in my life very often",
     "Options": [
       {
         "Number": 1,
@@ -249,7 +249,7 @@
   },
   {
     "Number": 9,
-    "Question": "I often get angry because of things that happens which are beyond my control?",
+    "Question": "I often feel fatigue and/or struggle to fall or stay asleep?",
     "Options": [
       {
         "Number": 1,
@@ -280,6 +280,37 @@
   },
   {
     "Number": 10,
+    "Question": "I often get angry because of things that happens which are beyond my control?",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 11,
     "Question": "I often feel that difficulties are piling up so high that i cannot overcome them",
     "Options": [
       {
